@@ -1,0 +1,2974 @@
+
+<!doctype html>
+<html lang="en-us" class="wide quotes-responsive quotes-300-right real-time no-js" xmlns:og="https://ogp.me/ns#" xmlns:fb="https://www.facebook.com/2008/fbml">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-K2BQVP7');</script>
+<!-- End Google Tag Manager -->
+<script>
+(function(){
+    var is_chrome;
+    if(typeof navigator.vendor!="undefined")
+	    is_chrome = ((navigator.userAgent.toLowerCase().indexOf('chrome') > -1) && (navigator.vendor.toLowerCase().indexOf("google") > -1));
+    else
+	    is_chrome = false;
+})();
+</script>
+<!-- includes\2-column-quotes-300-right.master -->
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1" />
+<meta name="viewport" content="width=device-width" />
+
+
+<!-- START page level head content -->
+<title>Microsoft Corporation Common Stock (MSFT) Real-Time Stock Quote - NASDAQ.com</title>
+<!-- aspx/NasdaqLastSale.aspx -->
+<link rel="canonical" href="https://www.nasdaq.com/symbol/msft/real-time" />
+<link rel="alternate" media="only screen and (max-width: 640px)" href="https://m.nasdaq.com/symbol/msft/real-time" />
+<link rel="alternate" href="https://www.nasdaq.com/es/symbol/msft/real-time" hreflang="es-es" />
+<link rel="alternate" href="https://www.nasdaq.com/it/symbol/msft/real-time" hreflang="it-it" />
+<link rel="alternate" href="https://www.nasdaq.com/de/symbol/msft/real-time" hreflang="de-de" />
+<link rel="alternate" href="https://www.nasdaq.com/zh/symbol/msft/real-time" hreflang="zh-cn" />
+<link rel="alternate" href="https://www.nasdaq.com/fr/symbol/msft/real-time" hreflang="fr-fr" />
+<link rel="alternate" href="https://www.nasdaq.com/symbol/msft/real-time" hreflang="x-default" />
+<meta name="keywords" content="real time Microsoft&#32;Corporation&#32;Common&#32;Stock stock quote, real time MSFT stock quote,Microsoft&#32;Corporation&#32;Common&#32;Stock last sale,last sale,Microsoft&#32;Corporation&#32;Common&#32;Stock real time stock quote,realtime stock quotes,real time stock quotes," />
+<meta name="description" content="MSFT Real Time Stock Quote - Get Microsoft&#32;Corporation&#32;Common&#32;Stock (MSFT) last sale data in real-time at NASDAQ.com." />
+<meta name="Robots" content="index,follow" />
+
+
+<script>
+myPage = 'NasdaqLastsale';
+sectionId = 'liQuotes';//section tab
+breadCrumbId = 'qQuotes';//page
+is_dartSite = "quotes";
+is_dartZone = "nls";
+
+propVar = "NLS Pages";
+propVar15 = "Quotes";
+googlechannel = 'NLS';
+googlehints = 'stock market, stock investment, trading account, real time quotes, portfolio tracking, stock charts, options trading, Nasdaq Stocks, Nasdaq Companies, Company Profiles, stock research, shares outstanding, stock Dividends, Stock trading, online stock, stock price, stock symbol, common stock, stock analysis, Options Trading, stock information';
+
+var selected_symbol = "MSFT";
+
+/*
+SRA ad definitions, this should always correspond with the ad calls on the page
+if an ad is removed from the page, it should be removed from here as well
+*/
+var useSRA = true;
+var premakeAds = [];
+
+/*quote page ads*/
+premakeAds.push({
+    'label': 'condition', 'expression': !/selectedsymboltype=[^(%2c)]*(%2c)*(Mutual%20Fund|Money%20Market|Index)/.test(document.cookie),
+    'true': { 'label': 'ad', 'size': '120x60', 'site': 'box_button', 'zone': is_dartZone }//quotebox ad, hide for certain market types
+});
+premakeAds.push({ 'label': 'ad', 'size': '120x60', 'site': 'leftnav_top', 'zone': is_dartZone });
+premakeAds.push({ 'label': 'ad', 'size': '980x20,300x25', 'site': is_dartSite, 'zone': is_dartZone });
+premakeAds.push({ 'label': 'ad', 'size': '88x31', 'site': is_dartSite, 'zone': is_dartZone });//additional 88x31
+premakeAds.push({ 'label': 'ad', 'size': '980x20,300x25', 'site': 'mop', 'zone': is_dartZone });
+premakeAds.push({ 'label': 'ad', 'size': '88x31', 'site': is_dartSite, 'zone': is_dartZone });
+premakeAds.push({
+    'label': 'condition', 'expression': selected_symbol != "VNTH" && selected_symbol != "NDAQ" && selected_symbol != "GLRI",//right side 300x250
+    'true': {
+        'label': 'condition', 'expression': 'adRotatorRandom', 'frequency': 50, 'randindex': 0,
+        'true': {
+            'label': 'condition', 'expression': selected_symbol != "QQQE",
+            'true': { 'label': 'ad', 'size': '300x250,300x600', 'site': is_dartSite, 'zone': is_dartZone },
+            'false': { 'label': 'ad', 'size': '300x250,300x600', 'site': 'quotes', 'zone': 'drxticker_qe' }
+        },
+        'false': { 'label': 'ad', 'size': '300x250,300x600', 'site': 'quotes', 'zone': 'nls' }
+    }
+});
+premakeAds.push({ 'label': 'ad', 'size': '300x250,300x600', 'site': 'mop', 'zone': is_dartZone });//right side dianomi
+//premakeAds.push({ 'label': 'ad', 'size': '120x60', 'site': 'newsbox', 'zone': is_dartZone });
+//premakeAds.push({
+//    'label': 'condition', 'expression': selected_symbol != "VNTH",//right side BTF
+//    'true': { 'label': 'ad', 'size': '300x250,300x600', 'site': 'btf', 'zone': is_dartZone }
+//});
+//premakeAds.push({ 'label': 'ad', 'size': '300x250', 'site': 'btf', 'zone': 'Dianomi' });//right side dianomi
+</script>
+
+<!--
+  ~ Copyright (C) 2014-2015 Media.net Advertising FZ-LLC All Rights Reserved
+  -->
+<script type="text/javascript">
+    window._mNHandle = window._mNHandle || {};
+    window._mNHandle.queue = window._mNHandle.queue || [];
+    medianet_versionId = "3121199";
+            </script>
+<script src="//contextual.media.net/dmedianet.js?cid=8CU1CBY9H" async="async"></script>
+<!-- END page level head content -->
+
+
+<!--********************************* BEGIN includes/global-references.inc **************************-->
+<!-- global stylesheets -->
+<link rel="stylesheet" type="text/css" href="https://www.nasdaq.com/includes/global.min-11132018v1.css"/>
+<!--[if lt IE 9]>
+<script src="https://www.nasdaq.com/includes/html5shiv-printshiv.js"></script>
+<link rel="stylesheet" type="text/css" href="https://www.nasdaq.com/includes/global-ie8.min-11212015v1.css"/>
+<![endif]-->
+
+<!-- favicon and shortcut icons -->
+<link rel="apple-touch-icon" href="https://www.nasdaq.com/images/Q_apple.png"/>
+<link rel="shortcut icon" href="https://www.nasdaq.com/images/qfav.ico" type="image/ico"/>
+<link rel="icon" href="https://www.nasdaq.com/images/qfav.ico" type="image/x-icon"/>
+<link rel="shortcut icon" href="https://www.nasdaq.com/images/qfav.ico" type="image/x-icon"/>
+
+  <!-- scripts -->
+
+  <!-- Casale -->
+  <script src="https://js-sec.indexww.com/ht/headertag-nasdaq.js" async></script>
+
+    <!-- GPT -->
+    <script async="true" src="https://www.googletagservices.com/tag/js/gpt.js"></script>
+
+    <script src="https://www.nasdaq.com/dynamic_includes/marketstatus.js"></script>
+    <script src="https://www.nasdaq.com/aspx/marketstatus.aspx"></script>
+
+    <script src="https://www.nasdaq.com/includes/jquery.min.js"></script>
+    <script src="https://www.nasdaq.com/includes/global.js?01292019v7"></script>
+    <script src="https://www.nasdaq.com/includes/cookie_policy.js?05232018v1"></script>
+    
+    <!-- the dynamic css container -->
+    <style type="text/css" title="dynamic"></style>
+    <script type="text/javascript">
+      //<![CDATA[
+updateSiteTheme();
+//]]>
+      var btfRefresh = [];
+
+      function adBtfRefresh(premakeAds) {
+        if ((premakeAds.label == "ad") && (premakeAds.site == "btf")) {
+          btfRefresh.push(premakeads);
+        }
+      }
+
+      googletag.cmd.push(function () {
+      autoAdRefresh(btfRefresh, 60000);
+      });
+
+      googletag.cmd.push(function () {
+      autoAdRefresh([0,1,2,3,4], 45000);
+      });
+    </script>
+   <!-- <script type='text/javascript' src='//rndntpmgnj-a.akamaihd.net/NA2L50A6M.js' async=''></script>-->
+
+    <!--  Quantcast Tag -->
+    <script>
+
+      var ezt = ezt ||[];
+
+      (function(){
+      var elem = document.createElement('script');
+      elem.src = (document.location.protocol == "https:" ? "https://secure" : "https://pixel") + ".quantserve.com/aquant.js?a=p-kGNZ2CXTUFYyw";
+      elem.async = true;
+      elem.type = "text/javascript";
+      var scpt = document.getElementsByTagName('script')[0];
+      scpt.parentNode.insertBefore(elem,scpt);
+      }());
+
+
+      (function(){
+      var label;
+      if(typeof propVar3=='undefined')
+      propVar3 = "";
+      if(typeof propVar15=='undefined')
+      propVar15 = "";
+      if(typeof propVar=='undefined')
+      propVar = "";
+      label = 'Author.'+propVar3+',Category.'+propVar15+'.'+propVar;
+      ezt.push({qacct: 'p-kGNZ2CXTUFYyw',
+      uid: '',
+      labels:label
+      });
+      }());
+
+    </script>
+    <noscript>
+      <img src="//pixel.quantserve.com/pixel/p-kGNZ2CXTUFYyw.gif" style="display: none;" border="0" height="1" width="1" alt="Quantcast"/>
+    </noscript>
+    <!-- End Quantcast Tag -->
+
+<!--********************************* END includes/global-references.inc **************************-->
+
+<!-- Begin includes/head-quotes-content.inc -->
+<link rel="stylesheet" type="text/css" href="https://www.nasdaq.com/includes/quotenav-with-quotebar.min-11152018v1.css" />
+<script type="text/javascript" src="https://www.nasdaq.com/includes/global-quotes.min-03292017v1.js"></script>
+<!-- End includes/head-quotes-content.inc -->
+
+<script type="text/javascript">
+    var server_time = new Date(1552797540091);
+</script>
+
+
+<!-- START page level style/script -->
+<script type="text/javascript">
+/*
+    myPage = 'NasdaqLastsale';
+    sectionId = 'liQuotes';//section tab
+    breadCrumbId = 'qQuotes';//page
+    is_dartSite = "utilities";
+    is_dartZone = "t1";
+
+    propVar = "NLS Pages";
+    propVar15 = "Quotes";
+    googlechannel = 'NLS';
+    googlehints = 'stock market, stock investment, trading account, real time quotes, portfolio tracking, stock charts, options trading, Nasdaq Stocks, Nasdaq Companies, Company Profiles, stock research, shares outstanding, stock Dividends, Stock trading, online stock, stock price, stock symbol, common stock, stock analysis, Options Trading, stock information';
+*/
+    var mobileModule = createMobileModule("mobileSummaryaccess", "https://m.nasdaq.com/symbol/msft/real-time");
+    mobileModule.checkFullSiteAccess();
+
+
+    //last sale page variables
+
+    //proshares natural gas tickers campaign
+
+    //var selected_symbol = "MSFT";
+
+	var intlModule = createLocalityModule("intlAccess", window.location.href.replace("nasdaq.com", "nasdaq.com/{0}"), 30, 733);
+	intlModule.checkUSSiteAccess();
+
+	//start egg
+
+	setTimeout(function () {
+	    var a = document.createElement("script");
+	    var b = document.getElementsByTagName("script")[0];
+	    a.src = document.location.protocol + "//dnn506yrbagrg.cloudfront.net/pages/scripts/0011/8850.js?" + Math.floor(new Date().getTime() / 3600000);
+	    a.async = true; a.type = "text/javascript"; b.parentNode.insertBefore(a, b)
+	}, 1);
+
+	// update parameters -->
+	var chartSleepTime = 120; //2 mins
+	var pageSleeptime = (function () {
+	    var today = new Date();
+	    if (today.getDay() == 6 || today.getDay() == 0 || today.getHours() < 9 || today.getHours() > 17) {
+	        return 90; /*Sleep time during non business hours, 90 secs*/
+	    }
+	    else {
+	        return 70; /*Sleep time during business hours, 70 secs */
+	    }
+	})();
+
+	$(document).ready(function () {
+	    setInterval("nasdaqRealTimePage.updateQuoteData()", pageSleeptime * 1000);
+	});
+
+	//high chart begin
+
+	var highchartScriptLoaded = $.Deferred();
+	var chartScriptLoaded = $.Deferred();
+
+	function highChartsLoaded() { highchartScriptLoaded.resolve() };
+
+	function realTimeChartInit() {
+	    nasdaqHighChart.getChartData();
+	    setInterval("nasdaqHighChart.updateChart()", chartSleepTime * 1000);
+	}
+
+	$.when(highchartScriptLoaded, chartScriptLoaded).then(function (value) {
+	    realTimeChartInit();
+	});
+
+	addScriptList([{ "url": "https://code.highcharts.com/stock/highstock.js", "async": true },
+        { "url": "https://code.highcharts.com/stock/highcharts-more.js", "async": true, "callback": "highChartsLoaded()" }]);
+
+	//high chart end
+
+	//refresh the page, track the event in omniture
+	function refresh() {
+	    triggerAsyncOmnitureClickEvent('quotes:refresh:real-time');
+	    window.location.reload();
+	}
+
+	//ad refresh
+
+	(function () {
+	    //array holding indexes into gSlots array of ads to be refreshed
+	    var refreshableIndexes = [];
+	    //tracks the number of premake blocks which fail to render an ad
+	    //need this because refreshableIndex array values will be used as indexes to gSlots array, where failed blocks won't exist
+	    var failIndex = 0;
+
+	    function evalBlock(adBlock, index) {
+        if (adBlock.label == "ad") {
+            if (adBlock.site == "btf")
+                refreshableIndexes.push(index);
+        }
+        if (adBlock.label == "condition") {
+            if (adBlock.expression != "adRotatorRandom" && adBlock.expression != "adRotatorRandomSwitch") {
+                if (adBlock.expression == true)
+                    evalBlock(adBlock["true"], index);
+                else if (adBlock.hasOwnProperty("false"))
+                    evalBlock(adBlock["false"], index);
+                else
+                    failIndex++;//block failed to render an ad
+            }
+            else {
+                if (adBlock.expression == "adRotatorRandom") {
+                    if (adRotatorRandStore[adBlock.randIndex])
+                        evalBlock(adBlock['true'], index);
+                    else if (adBlock.hasOwnProperty("false"))
+                        evalBlock(adBlock["false"], index);
+                    else
+                        failIndex++;//block failed to render an ad
+                }
+                else {//eval the block at the index resulting from the random switch  
+                    evalBlock(adBlock[adRotatorRandStore[adBlock.randIndex]], index);
+                }
+            }
+        }
+    }
+
+	    premakeAds.forEach(function (adBlock, index) {
+	        evalBlock(adBlock, index - failIndex);
+	    });
+
+	    googletag.cmd.push(function () {
+	        autoAdRefresh(refreshableIndexes, 60000);
+	    });
+	})();
+</script>
+<!--end egg -->
+<style type="text/css">
+.indexWidgetClosed, .indexWidgetOpen {
+    font-weight: normal;
+}
+.indexWidgetClosed div, .indexWidgetOpen div {
+    display: inline;
+    padding: 0 3px;
+}
+#additional-88x31 {
+    width: 88px;
+    height: 31px;
+    position: absolute;
+    top: 2px;
+    right: 90px;
+}
+</style>
+<!-- END page level style/script -->
+
+
+<style type="text/css">
+#container.wrap {background-color:#ffffff}
+#panel_left {float:left}
+</style>
+
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"false","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"","rua.cook":"false","rua.ims":"false"}]);</script>
+<script>!function(){function o(n,i){if(n&&i)for(var r in i)i.hasOwnProperty(r)&&(void 0===n[r]?n[r]=i[r]:n[r].constructor===Object&&i[r].constructor===Object?o(n[r],i[r]):n[r]=i[r])}try{var n=decodeURIComponent("");if(n.length>0&&window.JSON&&"function"==typeof window.JSON.parse){var i=JSON.parse(n);void 0!==window.BOOMR_config?o(window.BOOMR_config,i):window.BOOMR_config=i}}catch(r){window.console&&"function"==typeof window.console.error&&console.error("mPulse: Could not parse configuration",r)}}();</script>
+<script>!function(e){function a(a){if(a&&a.data&&a.data.boomr_mq)e.BOOMR_mq=e.BOOMR_mq||[],e.BOOMR_mq.push(a.data.boomr_mq)}var t="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,t="https://s2.go-mpulse.net/boomerang/";if(function(){function a(a){e.BOOMR_onload=a&&a.timeStamp||(new Date).getTime()}if(!e.BOOMR||!e.BOOMR.version&&!e.BOOMR.snippetExecuted){e.BOOMR=e.BOOMR||{},e.BOOMR.snippetExecuted=!0;var n,i,r,o=document.createElement("iframe");if(e.addEventListener)e.addEventListener("load",a,!1);else if(e.attachEvent)e.attachEvent("onload",a);o.src="javascript:void(0)",o.title="",o.role="presentation",(o.frameElement||o).style.cssText="width:0;height:0;border:0;display:none;",r=document.getElementsByTagName("script")[0],r.parentNode.insertBefore(o,r);try{i=o.contentWindow.document}catch(O){n=document.domain,o.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",i=o.contentWindow.document}i.open()._l=function(){var e=this.createElement("script");if(n)this.domain=n;e.id="boomr-if-as",e.src=t+"X7FLY-5XYMD-3HLZC-GZTNC-MNH9C",BOOMR_lstart=(new Date).getTime(),this.body.appendChild(e)},i.write("<bo"+'dy onload="document._l();">'),i.close()}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();if(e.addEventListener)e.addEventListener("message",a);var n=e.navigator;if(n&&"serviceWorker"in n&&n.serviceWorker.addEventListener)n.serviceWorker.addEventListener("message",a);!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var a=""=="true"?1:0,t="",n="jepedsvyk4yk2xenz5qa-f-eaed3729c-clientnsv4-s.akamaihd.net",i={"ak.v":19,"ak.cp":"160697","ak.ai":parseInt("237522",10),"ak.ol":"0","ak.cr":28,"ak.ipv":4,"ak.proto":"","ak.rid":"46ef61a4","ak.r":33987,"ak.a2":a,"ak.m":"a","ak.n":"essl","ak.bpcip":"73.30.65.0","ak.cport":62474,"ak.gh":"23.221.239.78","ak.quicv":"","ak.tlsv":"tls1.2","ak.0rtt":"","ak.csrc":"-","ak.acc":"reno"};if(""!==t)i["ak.ruds"]=t;var r={i:!1,av:function(a){var t="http.initiator";if(a&&(!a[t]||"spa_hard"===a[t]))i["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(i)},rv:function(){var e=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.r","ak.acc"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:i,akDNSPreFetchDomain:n,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+
+<body id="body">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K2BQVP7"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!--[if IE 8]> <script src="https://www.nasdaq.com/includes/respond.js"></script> <![endif]-->
+<!--[if IE 7]> <script src="https://www.nasdaq.com/includes/zindex.js"></script> <![endif]-->
+
+
+<!--*************************************** BEGIN includes/global-masthead.inc ****************************************-->
+<!-- comscore tag -->
+
+<!-- Begin comScore Tag -->
+<script>
+  var _comscore = _comscore || [];
+  _comscore.push({ c1: "2", c2: "25698457" });
+  (function() {
+  var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
+  s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+  el.parentNode.insertBefore(s, el);
+  })();
+</script>
+<noscript>
+  <img src="https://sb.scorecardresearch.com/p?c1=2&c2=25698457&cv=2.0&cj=1" />
+</noscript>
+<!-- End comScore Tag -->
+
+<!-- end comscore tag -->
+<header id="global_header" data-role="header">
+  <!--// Begin Hot Topics -->
+  <div id="hot_topics">
+    <div><b>Hot Topics:</b></div>
+    <a href="https://www.nasdaq.com/etfs" onclick="triggerAsyncOmnitureClickEvent('nav:hot-topics:ETFs')">ETFs</a>
+    <span>&nbsp;|&nbsp;</span>
+    <a href="https://stocktracker.nasdaq.com/smart-portfolio/welcome" onclick="triggerAsyncOmnitureClickEvent('nav:hot-topics:SmartPT')">Smart Portfolio</a>
+    <span>&nbsp;|&nbsp;</span>
+    <a href="https://www.nasdaq.com/forex/" onclick="triggerAsyncOmnitureClickEvent('nav:hot-topics:Currencies')">Currencies</a>
+    <span>&nbsp;|&nbsp;</span>
+    <a href="https://www.nasdaq.com/investing/online-brokers/" onclick="triggerAsyncOmnitureClickEvent('nav:hot-topics:Broker')">Online Broker Center</a>
+  </div>
+  <!--// End Hot Topics -->
+  <nav id="global_nav">
+    <div id="header_wrap">
+      <div class="logo">
+        <a href="https://www.nasdaq.com/" target="_self" onclick="triggerAsyncOmnitureClickEvent('nav:links:homepage')">
+          <span></span>
+        </a>
+      </div>
+      <div id="nasdaq_login">
+        <div id="nWelcome">
+          &nbsp;
+        </div>
+        <div id="mainNav-88x31">
+          <script type="text/javascript" language="javascript">makeAd('','88x31','masthead',is_dartZone,'','');</script>
+        </div>
+        <!--// Begin notifier placeholder -->
+        <div id="global_notifier" class="floatR">
+          <div class='ideaMelt' melt-notifier=''></div>
+        </div>
+        <!--// End notifier placeholder -->
+      </div>
+    </div>
+    <div class="clearB"></div>
+    <ul class="js-nav-toggle primary" id="js-nav-toggle">
+      <li id="site-nav-company">
+        <a href="https://business.nasdaq.com" data-click-event="nav:company:company-hub" onclick="triggerAsyncOmnitureClickEvent('nav:company:company-hub')">
+          <span>Our Businesses</span>
+        </a>
+        <div class="global_dropdown">
+          <div>
+            <div class="floatL half">
+              <ul>
+                <li>
+                  <a href="https://business.nasdaq.com/tech" onclick="triggerAsyncOmnitureClickEvent('nav:company:tech')"><b>Tech</b></a>
+                  <a href="https://business.nasdaq.com/tech" onclick="triggerAsyncOmnitureClickEvent('nav:company:tech')">Differentiate With <br />Technology</a>
+                </li>
+                <li>
+                  <a href="https://business.nasdaq.com/trade" onclick="triggerAsyncOmnitureClickEvent('nav:company:trade')"><b>Trade</b></a>
+                  <a href="https://business.nasdaq.com/trade" onclick="triggerAsyncOmnitureClickEvent('nav:company:trade')">Trade Multiple <br />Asset Classes</a>
+                </li>
+                <li>
+                  <a href="https://business.nasdaq.com/track" onclick="triggerAsyncOmnitureClickEvent('nav:company:track')"><b>Track</b></a>
+                  <a href="https://business.nasdaq.com/track" onclick="triggerAsyncOmnitureClickEvent('nav:company:track')">Track the Markets</a>
+                </li>
+              </ul>
+            </div>
+            <div class="displayIB half">
+              <ul>
+                <li>
+                  <a href="https://business.nasdaq.com/intel" onclick="triggerAsyncOmnitureClickEvent('nav:company:intel')"><b>Intel</b></a>
+                  <a href="https://business.nasdaq.com/intel" onclick="triggerAsyncOmnitureClickEvent('nav:company:intel')">Leverage Actionable <br />Intelligence</a>
+                </li>
+                <li>
+                  <a href="https://business.nasdaq.com/list" onclick="triggerAsyncOmnitureClickEvent('nav:company:list')"><b>List</b></a>
+                  <a href="https://business.nasdaq.com/list" onclick="triggerAsyncOmnitureClickEvent('nav:company:list')">Access Capital</a>
+                  <a href="https://listingcenter.nasdaq.com/" onclick="triggerAsyncOmnitureClickEvent('nav:company:list')">Listing Center</a>
+                </li>
+                <li>
+                  <a href="https://business.nasdaq.com/discover" onclick="triggerAsyncOmnitureClickEvent('nav:company:discover')"><b>Discover</b></a>
+                  <a href="https://business.nasdaq.com/discover" onclick="triggerAsyncOmnitureClickEvent('nav:company:discover')">Discover Nasdaq</a>
+                  <a href="https://business.nasdaq.com/marketinsite" onclick="triggerAsyncOmnitureClickEvent('nav:company:discover')">Nasdaq Blog</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!--// Begin includes/main-nav-company-featured.inc -->
+<div class="table-table featured">
+  <div class="table-row">
+    <div class="table-cell">
+      <a href="https://nasdaq.com/rewritetomorrow" onclick="triggerAsyncOmnitureClickEvent('nav:company:rewritetomorrow')">
+        <img src="https://www.nasdaq.com/images/rewritetomorrow80x80-10082018v4.jpg" width="80" height="80" alt="Rewrite Tomorrow featured image" />
+      </a>
+    </div>
+    <div class="table-cell">
+      <a href="https://nasdaq.com/rewritetomorrow" onclick="triggerAsyncOmnitureClickEvent('nav:company:rewritetomorrow')">
+        <b>Rewrite Tomorrow</b>
+      </a>
+      <div class="clearB"></div>
+      <span>Tomorrow is a market of endless possibilities, learn more</span>
+    </div>
+  </div>
+</div>
+<!--// End includes/main-nav-company-featured.inc -->
+        </div>
+      </li>
+      <li id="site-nav-quotes">
+        <a href="https://www.nasdaq.com/quotes" data-click-event="nav:quotes:quotes-hub" onclick="triggerAsyncOmnitureClickEvent('nav:quotes:quotes-hub')">
+          <span>Quotes</span>
+        </a>
+        <div class="global_dropdown">
+          <div>
+            <div class="floatL half">
+              <ul>
+                <li>
+                  <a href="https://www.nasdaq.com/quotes/" onclick="triggerAsyncOmnitureClickEvent('nav:quotes:quotes-hub')">
+                    <b>Quotes &amp; Research</b>
+                  </a>
+                  <a href="https://www.nasdaq.com/aspx/flashquotes.aspx" onclick="triggerAsyncOmnitureClickEvent('nav:quotes:flash-quotes')">Flash Quotes</a>
+                  <a href="https://www.nasdaq.com/aspx/infoquotes.aspx" onclick="triggerAsyncOmnitureClickEvent('nav:quotes:info-quotes')">InfoQuotes</a>
+                  <a href="https://www.nasdaq.com/quotes/stock-quotes.aspx" onclick="handleNQClick(this,'nav:quotes:summary-quotes')">Summary Quotes</a>
+                  <a href="https://www.nasdaq.com/quotes/real-time.aspx" onclick="handleNQClick(this,'nav:quotes:real-time')">Real-time Quotes</a>
+                  <a href="https://www.nasdaq.com/extended-trading/" onclick="handleNQClick(this,'nav:quotes:extended-trading')">Extended Trading</a>
+                  <a href="https://www.nasdaq.com/options/" onclick="handleNQClick(this,'nav:quotes:options')">Options Trading Center</a>
+                  <a href="https://www.nasdaq.com/quotes/historical-quotes.aspx" onclick="handleNQClick(this,'nav:quotes:historical-quotes')">Historical Quotes</a>
+                </li>
+                <li>
+                  <span class="fontS14px"><b>Charts</b></span>
+                  <a href="https://www.nasdaq.com/quotes/stock-charts.aspx" onclick="handleNQClick(this,'nav:quotes:basic-charts')">Basic Charts</a>
+                  <a href="https://www.nasdaq.com/quotes/interactive-charts.aspx" onclick="handleNQClick(this,'nav:quotes:interactive-charts')">Interactive Charts</a>
+                </li>
+                <li>
+                  <span class="fontS14px"><b>Companies</b></span>
+                  <a href="https://www.nasdaq.com/quotes/company-news.aspx" onclick="handleNQClick(this,'nav:quotes:news')">Company News</a>
+                  <a href="https://www.nasdaq.com/quotes/press-releases.aspx" onclick="handleNQClick(this,'nav:quotes:press-releases')">Press Releases</a>
+                  <a href="https://www.nasdaq.com/screening/company-list.aspx" onclick="triggerAsyncOmnitureClickEvent('nav:quotes:company-list')">Company List</a>
+                  <a href="https://www.nasdaq.com/screening/companies-by-industry.aspx?exchange=NASDAQ" onclick="handleNQClick(this,'nav:quotes:nasdaq')">Nasdaq Companies</a>
+                </li>
+              </ul>
+            </div>
+            <div class="floatR half">
+              <ul>
+                <li>
+                  <span class="fontS14px"><b>Stock Analysis</b></span>
+                  <a href="https://www.nasdaq.com/quotes/analyst-research.aspx" onclick="handleNQClick(this,'nav:quotes:analyst-research')">Analyst Research</a>
+                  <a href="https://www.nasdaq.com/quotes/stock-guru-analysis.aspx" onclick="handleNQClick(this,'nav:quotes:guru-analysis')">Guru Analysis</a>
+                  <a href="https://www.nasdaq.com/quotes/stock-reports.aspx" onclick="handleNQClick(this,'nav:quotes:stock-reports')">Stock Reports</a>
+                  <a href="https://www.nasdaq.com/quotes/business-competitors.aspx" onclick="handleNQClick(this,'nav:quotes:competitors')">Competitors</a>
+                </li>
+                <li>
+                  <span class="fontS14px"><b>Fundamentals</b></span>
+                  <a href="https://www.nasdaq.com/quotes/company-financials.aspx" onclick="handleNQClick(this,'nav:quotes:financials')">Financials</a>
+                  <a href="https://www.nasdaq.com/quotes/revenue-eps.aspx" onclick="handleNQClick(this,'nav:quotes:revenue-eps')">Revenue/EPS</a>
+                  <a href="https://www.nasdaq.com/quotes/sec-filings.aspx" onclick="handleNQClick(this,'nav:quotes:sec-filings')">SEC Filings</a>
+                  <a href="https://www.nasdaq.com/quotes/short-interest.aspx" onclick="handleNQClick(this,'nav:quotes:short-interest')">Short Interest</a>
+                  <a href="https://www.nasdaq.com/quotes/dividend-history.aspx" onclick="handleNQClick(this,'nav:quotes:dividend-history')">Dividend History</a>
+                </li>
+                <li>
+                  <span class="fontS14px"><b>Holdings</b></span>
+                  <a href="https://www.nasdaq.com/quotes/ownership.aspx" onclick="handleNQClick(this,'nav:quotes:ownership')">Ownership Summary</a>
+                  <a href="https://www.nasdaq.com/quotes/institutional-holdings.aspx" onclick="handleNQClick(this,'nav:quotes:institutional-holdings')">Institutional Holdings</a>
+                  <a href="https://www.nasdaq.com/quotes/insider-trades.aspx" onclick="handleNQClick(this,'nav:quotes:insider-trades')">Insiders Form 4</a>
+                </li>
+              </ul>
+            </div>
+            <div class="clearB"></div>
+          </div>
+        </div>
+      </li>
+      <li id="site-nav-markets">
+        <a href="https://www.nasdaq.com/markets/" data-click-event="nav:markets:markets-hub" onclick="triggerAsyncOmnitureClickEvent('nav:markets:markets-hub')">
+          <span>Markets</span>
+        </a>
+        <div class="global_dropdown">
+          <div>
+            <div class="floatL half">
+              <ul>
+                <li>
+                  <a href="https://www.nasdaq.com/extended-trading/" onclick="triggerAsyncOmnitureClickEvent('nav:markets:extended')">
+                    <b>Extended Hours</b>
+                  </a>
+                  <a href="https://www.nasdaq.com/extended-trading/premarket-mostactive.aspx" onclick="triggerAsyncOmnitureClickEvent('nav:markets:pre-market')">Pre-Market Activity</a>
+                  <a href="https://www.nasdaq.com/extended-trading/afterhours-mostactive.aspx" onclick="triggerAsyncOmnitureClickEvent('nav:markets:after-hours')">After Hours Activity</a>
+                </li>
+                <li>
+                  <span class="fontS14px"><b>Stocks</b></span>
+                  <a href="https://www.nasdaq.com/aspx/mostactive.aspx" onclick="triggerAsyncOmnitureClickEvent('nav:markets:most-active')">Most Active</a>
+                  <a href="https://www.nasdaq.com/markets/unusual-volume.aspx" onclick="triggerAsyncOmnitureClickEvent('nav:markets:unusual-volume')">Unusual Volume</a>
+                  <a href="https://www.nasdaq.com/aspx/52-week-high-low.aspx" onclick="triggerAsyncOmnitureClickEvent('nav:markets:52-week-high-low')">52 Week High/Low</a>
+                  <a href="https://www.nasdaq.com/markets/upcoming-splits.aspx" onclick="triggerAsyncOmnitureClickEvent('nav:markets:upcoming-splits')">Upcoming Splits</a>
+                  <a href="https://www.nasdaq.com/markets/sec-filings-n.aspx" onclick="triggerAsyncOmnitureClickEvent('nav:markets:sec-filings')">New SEC Filings</a>
+                  <a href="https://www.nasdaq.com/markets/ipos" onclick="triggerAsyncOmnitureClickEvent('nav:markets:ipo-summary')">IPO Summary</a>
+                  <a href="https://www.nasdaq.com/earnings/earnings-calendar.aspx" onclick="triggerAsyncOmnitureClickEvent('nav:markets:earnings-calendar')">Earnings Calendar</a>
+                  <a href="https://www.nasdaq.com/dividend-stocks/" onclick="triggerAsyncOmnitureClickEvent('nav:markets:dividend-stocks')">Dividend Stocks</a>
+                  <a href="https://www.nasdaq.com/markets/barchart-sectors.aspx" onclick="triggerAsyncOmnitureClickEvent('nav:markets:sector-analysis')">Sector Analysis</a>
+                </li>
+                <li>
+                  <a href="https://www.nasdaq.com/forex/" onclick="triggerAsyncOmnitureClickEvent('nav:markets:forex')"><b>Forex</b></a>
+                </li>
+              </ul>
+            </div>
+            <div class="floatR half">
+              <ul>
+                <li>
+                  <a href="https://www.nasdaq.com/markets/commodities.aspx" onclick="triggerAsyncOmnitureClickEvent('nav:markets:commodities')"><b>Commodities</b></a>
+                  <a href="https://www.nasdaq.com/markets/gold.aspx" onclick="triggerAsyncOmnitureClickEvent('nav:markets:gold')">Gold</a>
+                  <a href="https://www.nasdaq.com/markets/crude-oil.aspx" onclick="triggerAsyncOmnitureClickEvent('nav:crude-oil')">Oil</a>
+                </li>
+                <li>
+                  <span class="fontS14px"><b>Analyst Activity</b></span>
+                  <a href="https://www.nasdaq.com/earnings/daily-analyst-recommendations.aspx" onclick="triggerAsyncOmnitureClickEvent('nav:markets:upgrades-downgrades')">Upgrades/Downgrades</a>
+                  <a href="https://www.nasdaq.com/earnings/analyst-forecast-change.aspx" onclick="triggerAsyncOmnitureClickEvent('nav:markets:analyst-forecast-change')">Forecast Changes</a>
+                  <a href="https://www.nasdaq.com/earnings/daily-earnings-surprise.aspx" class="a-mega" onclick="triggerAsyncOmnitureClickEvent('nav:markets:daily-earnings-surprise')">Earning Surprises</a>
+                </li>
+                <li>
+                  <a href="https://www.nasdaq.com/markets/indices/" onclick="triggerAsyncOmnitureClickEvent('nav:markets:indices')"><b>Indices</b></a>
+                  <a href="https://www.nasdaq.com/markets/indices/major-indices.aspx" onclick="triggerAsyncOmnitureClickEvent('nav:markets:market-indices')">Major Stock Indices</a>
+                  <a href="https://www.nasdaq.com/markets/indices/sector-indices.aspx" onclick="triggerAsyncOmnitureClickEvent('nav:markets:sector-indices')">Market Sector Indices</a>
+                  <a href="https://www.nasdaq.com/markets/index-highs" onclick="triggerAsyncOmnitureClickEvent('nav:markets:statistical-milestones')">Statistical Milestones</a>
+                </li>
+                <li>
+                  <a href="https://www.nasdaq.com/markets/global-markets.aspx" onclick="triggerAsyncOmnitureClickEvent('nav:markets:global-markets')"><b>Global Markets</b></a>
+                </li>
+              </ul>
+            </div>
+            <div class="clearB"></div>
+          </div>
+        </div>
+      </li>
+      <li id="site-nav-news">
+        <a href="https://www.nasdaq.com/news/" data-click-event="nav:news:news-hub" onclick="triggerAsyncOmnitureClickEvent('nav:news:news-hub')">
+          <span>News</span>
+        </a>
+        <div class="global_dropdown">
+          <div>
+            <div class="floatL half">
+              <ul>
+                <li>
+                  <a href="https://www.nasdaq.com/quotes/company-news.aspx" onclick="triggerAsyncOmnitureClickEvent('nav:news:company-news')"><b>Company News</b></a>
+                </li>
+                <li>
+                  <a href="https://www.nasdaq.com/news/market-headlines.aspx" onclick="triggerAsyncOmnitureClickEvent('nav:news:market-headlines')"><b>Market Headlines</b></a>
+                </li>
+                <li>
+                  <a href="https://www.nasdaq.com/topic/marketinsite" onclick="triggerAsyncOmnitureClickEvent('nav:news:marketinsite')"><b>MarketInsite</b></a>
+                </li>
+              </ul>
+            </div>
+            <div class="floatR half">
+              <ul>
+                <li>
+                  <a href="https://www.nasdaq.com/markets/us-economic-calendar.aspx" onclick="triggerAsyncOmnitureClickEvent('nav:news:economic-calendar')"><b>Economic Calendar</b></a>
+                </li>
+                <li>
+                  <a href="https://www.nasdaq.com/tech/" onclick="triggerAsyncOmnitureClickEvent('nav:news:technology')"><b>Technology News</b></a>
+                </li>
+                <li>
+                  <a href="https://www.nasdaq.com/tomorrowscapital/" onclick="triggerAsyncOmnitureClickEvent('nav:news:tomorrowscapital')"><b>Tomorrow's Capital Podcast</b></a>
+                </li>
+              </ul>
+            </div>
+            <div class="clearB"></div>
+          </div>
+          <!-- Begin includes/main-navigation-featured-video.inc -->
+<div class="table-table featured">
+  <div class="table-row">
+    <div class="table-cell">
+      <a href="https://www.nasdaq.com/article/dont-underestimate-apples-iphone-business-cm1115073" onclick="triggerAsyncOmnitureClickEvent('nav:news:featured-article')">
+        <img src="https://www.nasdaq.com/images/news/0315news-am2.jpg" width="80" height="80" />
+      </a>
+    </div>
+    <div class="table-cell">
+      <a href="https://www.nasdaq.com/article/dont-underestimate-apples-iphone-business-cm1115073" onclick="triggerAsyncOmnitureClickEvent('nav:news:featured-article')">
+      Don't Underestimate Apple's iPhone Business
+      </a>
+      <div class="clearB"></div>
+    </div>
+  </div>
+</div>
+<!-- End includes/main-navigation-featured-video.inc -->
+        </div>
+      </li>
+      <li id="site-nav-investing">
+        <a href="https://www.nasdaq.com/investing/" data-click-event="nav:investing:investing-hub" onclick="triggerAsyncOmnitureClickEvent('nav:investing:investing-hub')">
+          <span>Investing</span>
+        </a>
+        <div class="global_dropdown">
+          <div>
+            <div class="floatL half">
+              <ul>
+                <li>
+                  <a href="https://www.nasdaq.com/investing/stocks.aspx" onclick="triggerAsyncOmnitureClickEvent('nav:investing:stocks')">
+                    <b>Stocks</b>
+                  </a>
+                  <a href="https://www.nasdaq.com/investing/how-to-invest.aspx" onclick="triggerAsyncOmnitureClickEvent('nav:investing:investing-basics')">Investing Basics</a>
+                  <a href="https://www.nasdaq.com/investing/online-brokers/" onclick="triggerAsyncOmnitureClickEvent('nav:investing:online-brokers')">Broker Comparison</a>
+                  <a href="https://www.nasdaq.com/investing/glossary/" onclick="triggerAsyncOmnitureClickEvent('nav:investing:glossary')">Glossary</a>
+                </li>
+                <li>
+                  <a href="https://www.nasdaq.com/investing/mutual-funds.aspx" onclick="triggerAsyncOmnitureClickEvent('nav:investing:mutual-funds')"><b>Mutual Funds</b></a>
+                </li>
+                <li>
+                  <a href="https://www.nasdaq.com/etfs" onclick="triggerAsyncOmnitureClickEvent('nav:investing:etfs')"><b>ETFs</b></a>
+                </li>
+                <li>
+                  <a href="https://www.nasdaq.com/options/" onclick="triggerAsyncOmnitureClickEvent('nav:investing:options')"><b>Options</b></a>
+                </li>
+              </ul>
+            </div>
+            <div class="floatR half">
+              <ul>
+                <li>
+                  <a href="https://www.nasdaq.com/investing/tools.aspx" onclick="triggerAsyncOmnitureClickEvent('nav:investing:tools')"><b>Investing Tools</b></a>
+                  <a href="https://www.nasdaq.com/reference/stock-screener.aspx" onclick="triggerAsyncOmnitureClickEvent('nav:investing:stock-screener')">Stock Screener</a>
+                  <a href="https://www.nasdaq.com/investing/guru/guru-stock-screener.aspx" onclick="triggerAsyncOmnitureClickEvent('nav:investing:guru-screener')">Guru Screener</a>
+                </li>
+                <li>
+                  <a href="https://www.nasdaq.com/advisor/" onclick="triggerAsyncOmnitureClickEvent('nav:investing:advisor')"><b>Financial Advisor <br />Center</b></a>
+                </li>
+                <li>
+                  <a href="https://www.nasdaq.com/investing/bonds.aspx" onclick="triggerAsyncOmnitureClickEvent('nav:investing:bonds')"><b>Bonds</b></a>
+                </li>
+              </ul>
+            </div>
+            <div class="clearB"></div>
+          </div>
+          <!--// Begin includes/main-nav-investing-feature.inc -->
+
+<div class="table-table featured">
+  <div class="table-row">
+    <div class="table-cell">
+      <a href="https://www.nasdaq.com/article/how-data-is-making-the-us-stock-market-open-for-all-investors-cm998274" onclick="triggerAsyncOmnitureClickEvent('nav:investing:the-anatomy-of-the-trade')">
+        <img src="https://www.nasdaq.com/images/anatomy-of-a-trade80x80.jpg" width="80" height="80" border="0" />
+      </a>
+    </div>
+    <div class="table-cell">
+      <a href="https://www.nasdaq.com/article/how-data-is-making-the-us-stock-market-open-for-all-investors-cm998274" onclick="triggerAsyncOmnitureClickEvent('nav:investing:the-anatomy-of-the-trade')">
+          <b>The Anatomy of a Trade</b>
+      </a>
+      <div class="clearB"></div>
+      <span>How data is making the U.S. stock market more open for all</span>
+    </div>
+  </div>
+</div>
+
+<!--// End includes/main-nav-investing-feature.inc -->
+        </div>
+      </li>
+      <li id="site-nav-pf">
+        <a href="https://www.nasdaq.com/personal-finance/" data-click-event="nav:personal-finance:pf-hub" onclick="triggerAsyncOmnitureClickEvent('nav:personal-finance:pf-hub')">
+          <span>Personal Finance</span>
+        </a>
+        <div class="global_dropdown">
+          <div>
+            <div class="floatL half">
+              <ul>
+                <li>
+                  <a href="https://www.nasdaq.com/personal-finance/retirement.aspx" onclick="triggerAsyncOmnitureClickEvent('nav:personal-finance:retirement')">
+                    <b>Retirement</b>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.nasdaq.com/personal-finance/real-estate.aspx" onclick="triggerAsyncOmnitureClickEvent('nav:personal-finance:real-estate')">
+                    <b>Real Estate</b>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.nasdaq.com/personal-finance/banking.aspx" onclick="triggerAsyncOmnitureClickEvent('nav:personal-finance:banking')">
+                    <b>Banking</b>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.nasdaq.com/personal-finance/insurance.aspx" onclick="triggerAsyncOmnitureClickEvent('nav:personal-finance:insurance')">
+                    <b>Insurance</b>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="floatR half">
+              <ul>
+                <li>
+                  <a href="https://www.nasdaq.com/personal-finance/saving-money/" onclick="triggerAsyncOmnitureClickEvent('nav:personal-finance:saving-money')">
+                    <b>Saving Money</b>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.nasdaq.com/personal-finance/taxes.aspx" onclick="triggerAsyncOmnitureClickEvent('nav:personal-finance:taxes')">
+                    <b>Taxes</b>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.nasdaq.com/personal-finance/investments.aspx" onclick="triggerAsyncOmnitureClickEvent('nav:personal-finance:investments')">
+                    <b>Investments</b>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.nasdaq.com/personal-finance/small-business.aspx" onclick="triggerAsyncOmnitureClickEvent('nav:personal-finance:small-business')">
+                    <b>Small Business</b>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="clearB"></div>
+          </div>
+          <!--// Begin includes/main-navigation-featured-article.inc -->
+<div class="table-table featured">
+  <div class="table-row">
+    <div class="table-cell">
+      <a href="https://www.nasdaq.com/article/why-retirement-planning-must-start-at-the-end-and-why-many-do-it-backward-cm1114533" onclick="triggerAsyncOmnitureClickEvent('nav:personal-finance:featured-article')">
+        <img src="https://www.nasdaq.com/images/news/0315news-am5.jpg" width="80" height="80" border="0" />
+      </a>
+    </div>
+    <div class="table-cell">
+      <a href="https://www.nasdaq.com/article/why-retirement-planning-must-start-at-the-end-and-why-many-do-it-backward-cm1114533" onclick="triggerAsyncOmnitureClickEvent('nav:personal-finance:featured-article')">
+      Why Retirement Planning Must Start at the End
+      </a>
+      <div class="clearB"></div>
+    </div>
+  </div>
+</div>
+<!--// End includes/main-navigation-featured-article.inc -->
+        </div>
+      </li>
+      <li id="site-nav-nasdaq">
+        <a href="https://stocktracker.nasdaq.com/smart-portfolio" data-click-event="nav:my-nasdaq:my-nasdaq-hub" onclick="triggerAsyncOmnitureClickEvent('nav:my-nasdaq:my-nasdaq-hub')">
+          <span>Portfolio</span>
+        </a>
+        <div class="global_dropdown">
+          <div>
+            <div class="floatL half">
+              <ul>
+                <li>
+                  <span class="fontS14px"><b>Smart Portfolio</b></span>
+                  <a href="https://stocktracker.nasdaq.com/smart-portfolio/welcome" onclick="triggerAsyncOmnitureClickEvent('nav:my-nasdaq:overview')">Overview</a>
+                  <a href="https://stocktracker.nasdaq.com/smart-portfolio/holdings/holdings" onclick="triggerAsyncOmnitureClickEvent('nav:my-nasdaq:holdings')">My Holdings</a>
+                  <a href="https://stocktracker.nasdaq.com/smart-portfolio/analysis/overview" onclick="triggerAsyncOmnitureClickEvent('nav:my-nasdaq:portfolio-analysis')">My Portfolio Analysis</a>
+                  <a href="https://stocktracker.nasdaq.com/smart-portfolio/insights" onclick="triggerAsyncOmnitureClickEvent('nav:my-nasdaq:insights')">Crowd Insights</a>
+                  <a href="https://stocktracker.nasdaq.com/smart-portfolio/performance" onclick="triggerAsyncOmnitureClickEvent('nav:my-nasdaq:performance')">My Performance</a>
+                </li>
+              </ul>
+            </div>
+            <div id="communitynav" class="floatR half">
+              <ul>
+                <li>
+                  <p class="margin0px">Join the Nasdaq Community today and get free, instant access to portfolios, stock ratings, real-time alerts, and more!</p>
+                  <div class="clearB margin5px"></div>
+                  <a href="https://community.nasdaq.com/" onclick="triggerAsyncOmnitureClickEvent('nav:my-nasdaq:register')">Join Today</a>
+                  <div class="clearB margin5px"></div>
+                </li>
+                <li>
+                  <h4>Already a member?</h4>
+                  <div class="clearB margin5px"></div>
+                  <a href="https://community.nasdaq.com/login.aspx" onclick="triggerAsyncOmnitureClickEvent('nav:my-nasdaq:login')">Login</a>
+                </li>
+              </ul>
+            </div>
+            <div class="clearB"></div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </nav>
+  <div id="global_nav_placeholder"></div>
+  <div class="global_search" id="global_search">
+    <div class="wrapper">
+      <div class="left-ad-unit120">
+        <script type="text/javascript" language="javascript">
+          makeAd('','120x60','bookend_left',is_dartZone,'','');
+        </script>
+        <script type="text/javascript" language="javascript">
+          makeAd('','120x60','Bookend_Left_In',is_dartZone,'','');
+        </script>
+      </div>
+      <!--//End 120x60 Ad Unit -->
+      <form method="post" action="/" id="stock-search" class="stock-search" onsubmit="return false;">
+        <div id="stock-search-wrap">
+          <label for="stock-search-text">
+            <input type="text" name="stock-search-text" id="stock-search-text" class="ajax-search" placeholder="Enter symbol, name or keyword" />
+            <button type="submit" id="stock-search-submit">
+              <span></span>
+            </button>
+          </label>
+        </div>
+      </form>
+      <script type="text/javascript">
+        if(!isIEBrowser() && !isMobileBrowser() && !isTabletBrowser())
+        {
+        $(function(){
+        $('#stock-search-text').focus();
+        });
+        }
+        Nasdaq_Quotesearch.init();
+      </script>
+      <div class="right-ad-unit120">
+        <script type="text/javascript" language="javascript">
+          makeAd('','120x60','Bookend_Right',is_dartZone,'','');
+        </script>
+        <script type="text/javascript" language="javascript">
+          makeAd('','120x60','Bookend_Right_In',is_dartZone,'','');
+        </script>
+      </div>
+      <!--//End 120x60 Ad Unit -->
+    </div>
+  </div>
+
+  <!--** START ALERT ~/includes/masthead_alert.inc **-->
+
+<!-- 
+  <div id="masthead-alert" style="visibility:hidden;">
+    <h2 style="font-weight:bold;background-color: #0095c5;border: 0;color: #ffffff;font-size: 17px;margin: -15px 0 15px;overflow: hidden;padding: 10px 10px 10px 35px;position: relative;text-transform: uppercase;">
+      <span>Nasdaq Earnings: </span>
+
+      <a href="https://www.nasdaq.com/article/nasdaq-ndaq-4th-quarter-earnings-what-to-expect-cm1088683" style="color:white;">What to expect from Nasdaq's 4th quarter</a>
+    </h2>
+  </div>
+  -->
+
+<!-- Script for different page sizes and visibility change -->
+<script type="text/javascript">
+  setTimeout(function(){
+    document.getElementById('masthead-alert').style.visibility = "visible";
+  },5000);
+</script>
+
+<!--** END ALERT ~/includes/masthead_alert.inc **-->
+
+  <!--<div id="global_banner" class="wrapper">
+    <script type="text/javascript" language="JavaScript">
+      makeAd('','728x90,970x90,970x250',is_dartSite,is_dartZone,'','');
+    </script>
+  </div>
+  --><!--//End global_banner -->
+
+  <script>initNav();</script>
+</header>
+<!--//End global_header-->
+
+<!--*************************************** END includes/global-masthead.inc ******************************************-->
+
+
+<script type="text/javascript">
+    cacheLoginStatus(false, null, null, null, "https\x3a\x2f\x2fcommunity.nasdaq.com");
+</script>
+
+<!--
+<div class="marginLAuto marginRAuto marginB15px" style="width:980px">
+<script type="text/javascript">
+	makeAd('8', '980x60', is_dartSite, is_dartZone, '', '');
+</script>
+</div>
+-->
+
+<div id="container" class="wrap cf">
+    <div id="content">
+        <div id="leaderboard">
+            <script type="text/javascript" language="JavaScript">makeAd('','728x90,970x90,970x250',is_dartSite,is_dartZone,'','');</script>
+        </div>
+        <div id="quotes-left-content">
+            <div class="qbreadcrumb">
+	            <span class="qbreadcrumb">
+                    
+    <span class="floatL">
+        <a href="https://www.nasdaq.com">Home</a><span>&nbsp;&gt;</span>
+        <a href="https://www.nasdaq.com/quotes/">Quotes</a><span>&nbsp;&gt;</span>
+        <a href="https://www.nasdaq.com/symbol/msft">MSFT</a><span>&nbsp;&gt;</span>
+        <a href="https://www.nasdaq.com/quotes/real-time.aspx">Real Time Quotes</a>
+    </span>
+    <script type="text/javascript" src="https://www.nasdaq.com/aspx/indexrowhtml.aspx?indexname=NASDAQDJIASPXWITHOUTIMAGE"></script>
+    <!--BREADCRUMB-->		
+
+	            </span>
+            </div>
+            
+            
+
+<!--// Begin includes/qwidget.ascx -->
+
+<div class="quotebar-wrap">
+
+<div class="header-wrap">
+    <div class="quote-wrap">
+	    <div class="quote-data-wrap">
+		    <div id="logo-wrap" class="floatL">
+			    
+				    <img class="quote-symbol-icon" height="40" width="100" src="https://www.nasdaq.com/logos/MSFT.GIF" alt="MSFT" />
+			    
+			    <div class="clearB"></div>
+			    
+					<div id="followButtonNew" class="melt"></div>				    
+				
+		    </div>
+		    <div id="qwidget-quote-wrap">
+			    <div id="qwidget_pageheader"><h1>Microsoft Corporation Common Stock Real Time Stock Quotes</h1> <b></b></div>
+			    <div class="clearB"></div>
+			    <div id="qwidget_quote" class="floatL marginTB5px">
+                    
+				    <div id="qwidget_lastsale" class="qwidget-dollar">$116.04</div>
+	                <div class="qwidget-dollar"><div>*&nbsp;&nbsp;</div></div>
+				    <div id="qwidget_netchange" class="qwidget-cents qwidget-Green">1.45</div>
+	                <div id="qwidget-arrow"><div class="marginLR10px arrow-green"></div></div>
+				    <div id="qwidget_percent" class="qwidget-percent qwidget-Green" style="white-space:nowrap">1.27%</div>
+				    <a class="getAlerts" href="javascript:void(0)" onclick="getAlertHandler();"><span>Get MSFT Alerts</span></a><br />
+			    </div>
+			    <div id="qwidget_markettimedate" class="floatL paddingB15px">
+				    <small>
+				        *Real-Time - data as of <span id="qwidget_markettime">3/14/2019</span>&nbsp;-&nbsp;
+				        <a href="https://www.nasdaq.com/investing/online-brokers/" onclick="triggerAsyncOmnitureClickEvent('quotes:quote-bar:brokers')">
+				            Find a broker to begin trading MSFT now
+				        </a>
+				    </small>
+			    </div>
+		    </div>
+		    <div id="qwidget-sector-wrap">
+			    <span id="qbar_exchangeLabel"><b>Exchange:</b>NASDAQ</span> <br />
+			    <span id="qbar_sectorLabel"><b>Industry: </b><a href="https://www.nasdaq.com/screening/companies-by-industry.aspx?industry=Technology">Technology</a></span> <br />
+			    <b>Community Rating:</b> <script src="https://www.nasdaq.com/aspx/community/sentiment.aspx?selected=MSFT&amp;size=small"></script> <br />
+			    
+	
+			    
+
+			    
+		    </div>
+		    <div id="qwidget-sector-wrap" class="marginR10px">
+		        <script type="text/javascript">
+                    makeAd('3','120x60','box_button',is_dartZone,'','');
+					
+                    	var followObjID = "symbol_594918104";
+					
+                    var followObjTitle = "Microsoft Corporation";
+                    var followObj = {"object_id":"symbol_594918104","object_type":"company","title":"Microsoft Corporation","permalink":"https://www.nasdaq.com/symbol/msft","image":"https://www.nasdaq.com/logos/MSFT.GIF","data":{"symbol":"MSFT"}};
+					
+                </script>
+				
+<script>
+var SymbolType = "USEquity";
+var StockIndustry = "Technology";
+</script>
+		    </div>
+	    </div>
+    </div><!--end quote-wrap-->
+</div><!-- end header-wrap -->
+
+</div>
+
+<!--// End includes/qwidget.ascx -->
+            <script type="text/javascript">
+var quoteBoxSelectedSymbol="MSFT";
+
+var quoteBoxSymbolArray = new Array(1);
+quoteBoxSymbolArray[0] = "MSFT";
+
+var quoteBoxNumSymbols = 1;
+
+var jsUserAgent = "curl\x2f7.62.0";
+
+var qbUseNewNav = true;
+</script>
+
+<script type="text/javascript"><!--inline script should be added to .inc files if we cannot added to if browser caching is a concern-->
+    // URL variables
+    var quoteURL = 'https://www.nasdaq.com/';
+    var wwwURL = 'https://www.nasdaq.com/';
+    var earningsURL = 'https://www.nasdaq.com/';
+    var screeningURL = 'https://www.nasdaq.com/';
+    var bLookup = false;
+    var selected = quoteBoxSelectedSymbol;
+
+    if (typeof qbUseNewNav == "undefined")
+        qbUseNewNav = false;
+
+    if (quoteBoxNumSymbols > 13) {
+        addStyle("dynamic", "#quotesnav_symbols_l {display:block;}");//
+        addStyle("dynamic", "#quotesnav_symbols_l_border {display:block;}");//
+    }
+    else {
+        addStyle("dynamic", "#quotesnav_symbols_l {display:none;}");//
+        addStyle("dynamic", "#quotesnav_symbols_l_border {display:none;}");//
+    }
+
+    addStyle("dynamic", "div.qbreadcrumb {left: 0px !important;height:0px;left:0px;top:0px;position:relative;width:800pxfloat:left;}");
+    addStyle("dynamic", "#qtopAd-graybg{float:left;font-size:11px;height:33px;padding:17px 0 0 5px;width:661px;position:relative;}");//
+    addStyle("dynamic", "#qtopAd-graybg-inside, #qtopAd-sponsored{float:left;}");//
+
+    function loginForAlerts() {
+        open_new_window("https://community.nasdaq.com/login.aspx?turl=" + encodeURIComponent("https://www.nasdaq.com/alerts/alertmanager.aspx?symbol=" + quoteBoxSelectedSymbol), 1020, 980, false, true, false);
+    }
+
+    //ad refresh for both 120x60 buttons on the quote nav
+    googletag.cmd.push(function () {
+        autoAdRefresh([6, 7], 40000);
+    });
+</script>
+<div class="symbol">
+    <div id="quotesnav_symbols_wrap" class="floatR">
+        <div id="quotesnav_symbols" class="quotesnav floatR">
+	        <div class="jcarousel-skin-tango">
+		        <div class="jcarousel-container jcarousel-container-horizontal">
+		            <div class="jcarousel-clip jcarousel-clip-horizontal">
+				        <ul class="jcarousel-list jcarousel-list-horizontal" id="mycarousel" style="width:795px">
+<li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-0 jcarousel-item-0-horizontal" jcarouselindex="0"><span><a class="qn_ontab" href="https://www.nasdaq.com/symbol/msft/real-time">MSFT</a></span></li>
+</ul>
+  			        </div>
+		        </div>
+	        </div>
+        </div>
+
+        <div id="quotesnav_symbols_border" class="quotesnav floatR">&nbsp;</div>
+
+        <div id="quotesnav_symbols_l" class="quotesnav floatR">
+	        <div class="jcarousel-skin-tango">
+		        <div class="jcarousel-container jcarousel-container-horizontal">
+		            <div class="jcarousel-clip jcarousel-clip-horizontal">
+				        <ul class="jcarousel-list jcarousel-list-horizontal" id="mycarousel" style="width:795px">
+</ul>
+  			        </div>
+		        </div>
+	        </div>
+        </div>
+
+        <div id="quotesnav_symbols_l_border" class="quotesnav floatR">&nbsp;</div>
+    </div>
+    </div>
+
+<div id="panel_left" class="vertical-nav-wrap floatL">
+
+    <div class="edit-symbol">
+		<form name="frmAddASymbol" method="get" onsubmit="return false">
+			<span>
+				<span class="displayIB ValignM marginB10px edit-symbol-icon"></span>
+                <a href="javascript:void(0);" onclick="triggerAsyncOmnitureClickEvent('quotes:modal:edit-symbols');pushmodal('edit_symbol_modal_box','editSymbolListModalBoxInit()');">Edit Symbol List</a>
+			</span>
+            <br />
+			<span><!--id added here-->
+				<span class="displayIB ValignM symbol-lookup-icon"></span>
+                <a href="javascript:void(0);" onclick="triggerAsyncOmnitureClickEvent('quotes:modal:symbol-lookup');pushmodal('symbol_lookup_modal_box','symbolLookupModalBoxinit(\'stock\')')">Symbol Lookup</a>
+			</span>	
+		</form>
+    </div><!--end qn_addsymbol-->
+
+	<div class="marginB10px">
+        <script type="text/javascript">makeAd('', '120x60', 'leftnav_top', is_dartZone, '', '');</script>
+    </div>
+
+    <div id="quotesnav" class="vertical-nav floatL">
+
+        <form name="quotenav" id="quotenav" method="get" onsubmit="return CheckInput()">
+		    <input id="mode" type="hidden">
+		    <input id="kind" type="hidden">
+		    <input id="timeframe" type="hidden">
+		    <input id="intraday" type="hidden">
+		    <input id="charttype" type="hidden">
+		    <input id="splits" type="hidden">
+		    <input id="earnings" type="hidden">
+		    <input id="movingaverage" type="hidden">
+		    <input id="lowerstudy" type="hidden">
+		    <input id="comparison" type="hidden">
+		    <input id="index" type="hidden">
+		    <input id="FormType" type="hidden">
+		    <input id="mkttype" type="hidden">
+		    <input id="pathname" type="hidden">
+		    <input id="headlinesswitch" type="hidden">
+		    <input id="pressreleaseswitch" type="hidden">
+		    <input id="extendedswitch" type="hidden">
+	        <select style="display:none" id="quotepage" onchange="CheckInput()">
+			    <option value="NasdaqLastsale">Real Time</option>
+			    <option value="nlstrades">NLS Trade Reporting</option>
+			    <option value="quick">FlashQuotes</option>
+			    <option value="multi">InfoQuotes</option>
+			    <option value="summaryquote">Summary Quote</option>
+			    <option value="charting">Charts</option>
+			    <option value="dynamic_charting">Interactive Charts</option>
+			    <option value="premarketcharts">Pre-Market Charts</option>
+			    <option value="afterhourscharts">After Hours Charts</option>
+			    <option value="redpage">Revenue / EPS Summary</option>
+			    <option value="full">Company Financials</option>
+			    <option value="competitor">- View Competitors</option>
+			    <option value="short">- Short Interest</option>
+			    <option value="companynews">Company News</option>
+			    <option value="companypressrelease">Press Releases</option>
+			    <option value="companynewsthestreet">Company News</option>
+			    <option value="companynewsthefool">Press Releases</option>
+			    <option value="sentiment">Sentiment</option>					
+			    <option value="analystinfo">Analyst Stock Research</option>
+			    <option value="stockreports">Stock Report</option>
+			    <option value="filings">SEC Filings</option>
+			    <option value="holdingssummary">- Holdings/Insider Summary</option>
+			    <option value="holdings">- Institutional Holdings</option>
+			    <option value="insiderform4">- Insider Form 4</option>
+			    <!--<option value="insiderform144">- Insider Form 144</option>-->
+			    <option value="options">Equity Options</option>
+			    <option value="premarket">Pre-Market Quotes</option>
+			    <option value="afterhours">After Hours Quotes</option>
+			    <option value="stockconsultant">Company Research</option>
+			    <option value="stockconsultant">- StockConsultant</option>
+			    <option value="stockcomparison">Stock Comparison</option>
+			    <option value="guruanalysis">- Guru Analysis</option>
+			    <option value="annualrpt">Annual Report</option>
+			    <option value="historical_quotes">Historical Quotes</option>
+			    <option value="CallTranscripts">Call Transcripts</option>
+			    <option value="dividend_history">Dividend History</option>
+			    <option value="guru-lynch">Lynch Analysis</option>
+			    <option value="guru-graham">Graham Analysis</option>
+			    <option value="guru-validea">Validea Momentum Analysis</option>
+			    <option value="guru-fool">Fool Analysis</option>
+			    <option value="guru-dreman">Dreman Analysis</option>
+			    <option value="guru-zweig">Zweig Analysis</option>
+			    <option value="guru-fisher">Fisher Analysis</option>
+			    <option value="guru-oshaughnessy">OShaughnessy Analysis</option>
+                <option value="etfdetail">ETF detail</option>
+                <option value="etfprofile">ETF Profile</option>
+			    <option value="chartingfunds">Comparison Charts</option>
+	        </select>
+        </form>
+	
+        <iframe name="validateSymbolForm" id="validateSymbolForm" frameborder="0" height="0" width="0"></iframe>
+		
+
+        <h5>Symbol List Views</h5>
+            <a id="quicklink" href="https://www.nasdaq.com/aspx/flashquotes.aspx?symbol=MSFT&amp;selected=MSFT" onclick="triggerAsyncOmnitureClickEvent('quotes:nav:flashquote')">FlashQuotes</a>
+            <a id="multilink" href="https://www.nasdaq.com/aspx/infoquotes.aspx?symbol=MSFT&amp;selected=MSFT" onclick="triggerAsyncOmnitureClickEvent('quotes:nav:infoquote')">InfoQuotes</a>
+
+        <h5> 
+                    Stock Details
+           
+        </h5>
+            <a id="summaryquotelink" href="https://www.nasdaq.com/symbol/msft" onclick="triggerAsyncOmnitureClickEvent('quotes:nav:summary')">Summary Quote</a>
+		        
+            <a id="NasdaqLastsalelink" href="https://www.nasdaq.com/symbol/msft/real-time" onclick="triggerAsyncOmnitureClickEvent('quotes:nav:real-time')">Real-Time Quote</a>
+            <a id="afterhourslink" href="https://www.nasdaq.com/symbol/msft/after-hours" onclick="triggerAsyncOmnitureClickEvent('quotes:nav:after-hours')">After Hours Quote</a>
+            <a id="premarketlink" href="https://www.nasdaq.com/symbol/msft/premarket" onclick="triggerAsyncOmnitureClickEvent('quotes:nav:pre-market')">Pre-market Quote</a>
+	        <a id="historical_quoteslink" href="https://www.nasdaq.com/symbol/msft/historical" onclick="triggerAsyncOmnitureClickEvent('quotes:nav:historical')">Historical Quote</a>
+	        <a id="optionslink" href="https://www.nasdaq.com/symbol/msft/option-chain" onclick="triggerAsyncOmnitureClickEvent('quotes:nav:option-chain')">Option Chain</a>	  
+      
+        <h5>CHARTS</h5>
+            <a id="chartinglink" href="https://www.nasdaq.com/symbol/msft/stock-chart" onclick="triggerAsyncOmnitureClickEvent('quotes:nav:stock-chart')">Basic Chart</a>
+            <a id="dynamic_chartinglink" href="https://www.nasdaq.com/symbol/msft/interactive-chart" onclick="triggerAsyncOmnitureClickEvent('quotes:nav:interactive-chart')">Interactive Chart</a>   
+  
+        <h5>
+		        
+    
+                COMPANY NEWS</h5>
+                    <a id="companynewslink" href="https://www.nasdaq.com/symbol/msft/news-headlines" onclick="triggerAsyncOmnitureClickEvent('quotes:nav:news-headlines')">Company Headlines</a>
+                    <a id="companypressreleaselink" href="https://www.nasdaq.com/symbol/msft/press-releases" onclick="triggerAsyncOmnitureClickEvent('quotes:nav:press-releases')">Press Releases</a>
+                    <a id="sentimentlink" href="https://www.nasdaq.com/symbol/msft/stream" onclick="triggerAsyncOmnitureClickEvent('quotes:nav:stream')">Market Stream</a>
+        
+                
+    
+                <h5>STOCK ANALYSIS</h5>
+                    <a id="analystinfolink" href="https://www.nasdaq.com/symbol/msft/analyst-research" onclick="triggerAsyncOmnitureClickEvent('quotes:nav:analyst-research')">Analyst Research</a>
+                    <a id="guruanalysislink" href="https://www.nasdaq.com/symbol/msft/guru-analysis" onclick="triggerAsyncOmnitureClickEvent('quotes:nav:guru-analysis')">Guru Analysis</a>
+                    <a id="stockreportslink" href="https://www.nasdaq.com/symbol/msft/stock-report" onclick="triggerAsyncOmnitureClickEvent('quotes:nav:stock-report')">Stock Report</a>
+                    <a id="competitorlink" href="https://www.nasdaq.com/symbol/msft/competitors" onclick="triggerAsyncOmnitureClickEvent('quotes:nav:competitors')">Competitors</a>
+			        <a id="stockconsultantlink" href="https://www.nasdaq.com/symbol/msft/stock-consultant" onclick="triggerAsyncOmnitureClickEvent('quotes:nav:stock-consultant')">Stock Consultant</a>
+			        <a id="stockcomparisonlink" href="https://www.nasdaq.com/symbol/msft/stock-comparison" onclick="triggerAsyncOmnitureClickEvent('quotes:nav:stock-comparison')">Stock Comparison</a>
+                <h5>FUNDAMENTALS</h5>
+                    <a id="CallTranscriptslink" href="https://www.nasdaq.com/symbol/msft/call-transcripts" onclick="triggerAsyncOmnitureClickEvent('quotes:nav:call-transcripts')">Call Transcripts</a>
+        	        <a id="annualrptlink" href="http://www.companyspotlight.com/partner?cp_code=NAS1&amp;ticker=MSFT" onclick="triggerAsyncOmnitureClickEvent('quotes:nav:annual-report')">Annual Report</a>
+                    <a id="fulllink" href="https://www.nasdaq.com/symbol/msft/financials?query=income-statement" onclick="triggerAsyncOmnitureClickEvent('quotes:nav:income-statement')">Income Statement</a>
+                    <a id="redpagelink" href="https://www.nasdaq.com/symbol/msft/revenue-eps" onclick="triggerAsyncOmnitureClickEvent('quotes:nav:revenue-eps')">Revenue/EPS</a>
+                   <a id="filingslink" href="https://www.nasdaq.com/symbol/msft/sec-filings" onclick="triggerAsyncOmnitureClickEvent('quotes:nav:sec-filings')">SEC Filings</a>
+			        <a id="shortlink" href="https://www.nasdaq.com/symbol/msft/short-interest" onclick="triggerAsyncOmnitureClickEvent('quotes:nav:short-interest')">Short Interest</a>
+			        <a id="dividend_historylink" href="https://www.nasdaq.com/symbol/msft/dividend-history" onclick="triggerAsyncOmnitureClickEvent('quotes:nav:dividend-history')">Dividend History</a>
+                <h5>HOLDINGS</h5>
+                    <a id="holdingssummarylink" href="https://www.nasdaq.com/symbol/msft/ownership-summary" onclick="triggerAsyncOmnitureClickEvent('quotes:nav:ownership-summary')">Ownership Summary</a>
+                    <a id="holdingslink" href="https://www.nasdaq.com/symbol/msft/institutional-holdings" onclick="triggerAsyncOmnitureClickEvent('quotes:nav:institutional-holdings')">Institutional Holdings</a>
+                    <a id="insiderform4link" href="https://www.nasdaq.com/symbol/msft/insider-trades" onclick="triggerAsyncOmnitureClickEvent('quotes:nav:insider-trades')">Insiders<br />(SEC Form 4)</a>
+
+            
+    </div><!-- quotesnav -->
+
+</div><!-- end panel left-->
+
+<!-- modal box implementations -->
+
+<!-- edit symbol box-->
+
+<div id="edit_symbol_modal_box" class="modal_content" style="width:410px;height:315px;top:100px;left:400px">
+	<!-- close button-->
+	<span class="close" onclick="popmodal()">CLOSE<span class="x">X</span></span><br />
+	<!-- header -->
+	<div class="TalignC">
+		<h2>Edit Symbol List</h2>
+	</div>
+	<!-- text -->
+	<div class="marginL10px">
+		<p>Enter up to 25 symbols separated by commas or spaces in the text box below. These symbols will be available during your session for use on applicable pages.</p>
+	</div>
+
+	<div class="marginL10px">
+		<!-- input box -->
+		<div class="floatL">
+			<textarea rows="3" cols="40" name="modalinput" id ="modalinput" onkeypress="if(event.keyCode ==13){gomodal();}else if(event.keyCode == 27){popmodal();}"></textarea>
+		</div>
+		<!-- right side controls -->
+		<div class="floatL marginL10px">
+			<a href="javascript:void(0)" onclick="gomodal();" class="lightgreen-button marginB5px TalignC">Go Now</a>
+            <br />
+			<a href="javascript:void(0)" onclick="clearlist();" class="red-button">Clear List</a>			
+		</div>
+	</div>
+
+    <div class="clearB"></div>
+
+	<!-- symbol lookup text-->
+	<div class="marginL10px">
+		<p>
+            Don't know the stock symbol?  Use the 
+            <a href="javascript:void(0);" onclick="triggerAsyncOmnitureClickEvent('edit-symbols:modal:symbol-lookup');pushmodal('symbol_lookup_modal_box','symbolLookupModalBoxinit()')">Symbol Lookup</a> tool.
+	        <br/>
+		    <input type="checkbox" id="orderlistcontrol" class="marginR5px" onclick="triggerAsyncOmnitureClickEvent('edit-symbols:checkbox:alphabetize')" />Alphabetize the sort order of my symbols
+		</p>
+	</div>
+
+</div>
+
+<!-- end edit symbol box -->
+
+<!-- symbol lookup modal box -->
+<div id="symbol_lookup_modal_box" class="modal_content" style="width:440px;min-height:370px;top:100px;left:35%">
+	<!-- close button-->
+	<span class="close" onclick="popmodal()">CLOSE<span class="x">X</span></span>
+	<div class="clearB paddingT5px"></div>
+	<table width="415" class="marginL5px">
+        <tr><td>&nbsp;</td></tr>
+		<tr><td><h2>Symbol Lookup</h2></td></tr>
+	</table>
+	<iframe id="msymbollookupframe" frameborder="0" style="width:100%;height:255px"></iframe>
+</div>
+<!-- end symbol lookup modal box -->
+<!-- begin lightbox backdrop -->
+<table class="backdrop" id="customModal">
+	<tr>
+		<td>
+            <!-- begin lightboxness -->
+            <div class="lightbox" id="followPromo">
+				<!-- close button-->
+				<span class="close" onclick="close_modal()">CLOSE<span class="x">X</span></span>
+                <h2>Investing just got easier&#8230;</h2>
+                <h4>Sign up now to become a NASDAQ.com member and begin receiving instant notifications when key events occur that affect the stocks you follow.</h4>
+                <a class="faux-button lightgreen-button" href="https://community.nasdaq.com/" onclick="triggerAsyncOmnitureClickEvent('quotes:faux-follow:access-now')">
+                    <span>Access Now</span>
+                </a>
+                <div class="clearB"></div>
+                
+            </div>
+            <!-- end lightboxness -->
+         </td>
+	</tr>
+</table>
+<!-- end lightbox backdrop -->
+
+<script type="text/javascript">
+    function close_modal()//closes all custom modal boxes
+    {
+        $('#customModal .lightbox').removeClass('visible');
+        $('#customModal').removeClass('visible');
+    }
+
+    function open_modal(contentID)//opens a custom modal box, contentID is the unique ID
+    {
+        $('#customModal').addClass('visible'); //display the loading box
+        $('#' + contentID).addClass('visible');
+    }
+
+    function switch_to_modal(contentID)//switches from one custom modal box to another, contentID is the unique ID
+    {
+        $('#customModal .lightbox').removeClass('visible');
+        $('#' + contentID).addClass('visible');
+    }
+</script>
+            <div class="q-gray-wrap">
+                <!--// begin cookie checkbox -->
+                <div class="quotenav_checkbox-leftgray">
+                    <input type="checkbox" id="cookiepref" onclick="triggerAsyncOmnitureClickEvent('quotes:checkbox:save-stocks');toggleCookieNav()">&nbsp;Save Stocks
+                </div>
+                <!--// end cookie checkbox -->
+                <!--// begin 980 unit -->
+                <div id="qtop-graybg">
+                    
+<div id="qtopAd-graybg-inside">
+    <script type="text/javascript">makeAd('','980x20,300x25',is_dartSite,is_dartZone,'','');</script>
+</div>
+<div id="additional-88x31">
+    <script type="text/javascript">makeAd('','88x31',is_dartSite,is_dartZone,'','');</script>
+</div>
+<div class="graybg-refresh">
+    <input type="button" onclick="refresh()" value="Refresh" />
+</div>
+
+                </div>
+                <!--// end 980 unit -->
+            </div>
+            
+            <div id="left-column-div">
+                
+
+
+
+        <div></div>
+		<div class="genTable">
+			<table>
+			    <thead>
+                    <tr>
+                        <th>
+                            <a class="tt show-link" id="last_sale" onmouseover="showDelayedToolTip('last_sale')" onmouseout="hideToolTip('last_sale')" href="javascript:void(0)">
+                                MSFT's NASDAQ Last Sale (NLS)
+                                <span class="tooltipLG">
+                                    <span class="topLG"></span>
+                                    <span class="middleLG">
+                                        "Last Sale" is the price at which a stock last traded during regular market hours.
+                                    </span>
+                                    <span class="bottomLG"></span>
+                                </span>
+                            </a>
+                        </th> 
+                        <th>
+                            <a class="tt show-link" id="share_volume" onmouseover="showDelayedToolTip('share_volume')" onmouseout="hideToolTip('share_volume')" href="javascript:void(0)">
+                                NLS Volume
+                                <span class="tooltipLG">
+                                    <span class="topLG"></span>
+                                    <span class="middleLG">
+                                        "Volume" is the number of shares of the stock traded on the listing exchange during regular trading hours.
+                                    </span>
+                                    <span class="bottomLG"></span>
+                                </span>
+                            </a>
+                        </th>  
+	                    <th>Previous Close</th>
+	                    <th>Today's High / Low</th>
+                        <th>52 Week High / Low</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <span id="quotes_content_left__LastSale" style="display:inline-block;">116.04</span>
+                            &nbsp;&nbsp;
+                            <span id="quotes_content_left__NetChange">1.45</span>
+                            &nbsp;<span class="green" id="_updownImage">&#9650;</span>
+                            &nbsp;<span id="quotes_content_left__PctChange">1.27%</span>
+                        </td>
+                        <td><span id="quotes_content_left__Volume">59,937,016</span></td>
+                        <td>$<span id="quotes_content_left__PreviousClose">114.59</span></td>
+                        <td>&nbsp;<span id="quotes_content_left__TodaysHigh">117.25</span> / <span id="quotes_content_left__TodaysLow">114.30</span></td>
+                        <td><span id="quotes_content_left__52WeekHigh">$116.18</span> / <span id="quotes_content_left__52WeekLow">$87.08</span></td>
+                    </tr>
+                </tbody>
+			</table>
+		</div>
+        <div class="floatR paddingT10px">
+			<small>Data as of <span id="quotes_content_left__TradeTimeStamp">3/17/2019 12:38:56 AM</span>&nbsp;-&nbsp;<span id="quotes_content_left__MarketStatus"></span></small>
+        </div>
+
+		<div class="clearB"></div>
+        <br />
+
+		<div id="chartcontainer"></div>
+
+		<script type="text/javascript">
+		    document.write("<div class=\"sub-nav\"><ul class=\"inline noindent marginR0px\"><li><a class=\"selected-sub-nav\" href=\"javascript:void(0)\">Intraday</a></li> ");
+		    document.write("<li><a href=\"https://www.nasdaq.com/symbol/msft/interactive-chart?timeframe=5d\">5 day</a></li> ");
+		    document.write("<li><a href=\"https://www.nasdaq.com/symbol/msft/interactive-chart?timeframe=1m\">1 Month</a></li> ");
+		    document.write("<li><a href=\"https://www.nasdaq.com/symbol/msft/interactive-chart?timeframe=6m\">6 Months</a></li> ");
+		    document.write("<li><a href=\"https://www.nasdaq.com/symbol/msft/interactive-chart?timeframe=1y\">1 Year</a></li> ");
+		    document.write("<li><a href=\"https://www.nasdaq.com/symbol/msft/interactive-chart\">More Charting</a></li></ul></div>");
+		</script>
+
+        <script async src="https://pwsprod-predictwallstree1.netdna-ssl.com/widgets/js/widget.js"></script>
+
+		<div class="clearB"></div>
+        <br />
+        <form method="post" action="./real-time?symbol=MSFT&amp;selected=MSFT" id="news">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="94B4FA39" />
+<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" />
+            
+<!--// Begin -- /aspx/CompanyNewsCommentary.ascx -->
+
+<div id="CompanyNewsCommentary">
+    <div id="CompanyNewsCommentary_Header">
+        <div id="CompanyNewsCommentary_Heading">
+            <h2>News for MSFT</h2>
+        </div>
+        <div class="clearB"></div>
+    </div>
+    <ul class="orange-ordered-list">
+        
+          
+        <li>
+            <a target="_self" href="https://www.nasdaq.com/article/apple-infringed-three-qualcomm-patents-jury-finds-20190315-00602" class="fontS14px">
+                Apple infringed three Qualcomm patents, jury finds
+            </a>
+            <br />
+            <small>3/15/2019 2:46:00 PM - Reuters</small>
+        </li>
+        
+        <li>
+            <a target="_self" href="https://www.nasdaq.com/article/us-stocks-on-the-moveboeing-tesla-ge-facebook-amazon-adobe-20190315-00545" class="fontS14px">
+                U.S. STOCKS ON THE MOVE-Boeing, Tesla, GE, Facebook, Amazon, Adobe
+            </a>
+            <br />
+            <small>3/15/2019 12:39:00 PM - Reuters</small>
+        </li>
+        
+        <li>
+            <a target="_self" href="https://www.nasdaq.com/article/tech-makes-a-comeback-as-wall-streets-trendy-trade-20190315-00201" class="fontS14px">
+                Tech makes a comeback as Wall Street's trendy trade
+            </a>
+            <br />
+            <small>3/15/2019 7:00:00 AM - Reuters</small>
+        </li>
+        
+        <li>
+            <a target="_self" href="https://www.nasdaq.com/article/microsoft-targets-video-game-developers-in-challenge-to-amazons-cloud-dominance-20190314-00719" class="fontS14px">
+                Microsoft targets video game developers, in challenge to Amazon's cloud dominance
+            </a>
+            <br />
+            <small>3/14/2019 11:00:00 AM - Reuters</small>
+        </li>
+        
+        <li>
+            <a target="_self" href="https://www.nasdaq.com/article/asean-foundation-and-microsoft-launch-a-joint-initiative-to-create-a-generation-of-futureready-20190314-00108" class="fontS14px">
+                ASEAN Foundation and Microsoft Launch a Joint Initiative to Create a Generation of Future-Ready ASEAN Youth
+            </a>
+            <br />
+            <small>3/14/2019 3:00:00 AM - Japan Corporate News</small>
+        </li>
+        
+    </ul>
+    <div id="CompanyNewsCommentary_MoreLinks" class="widthF">
+        
+        <div id="CompanyNewsCommentary_RSS" class="subscribe-anchor">
+            <a href="http://articlefeeds.nasdaq.com/nasdaq/symbols?symbol=MSFT" id="quotes_content_left_CMCId_hlRss" class="fontS14px ValignM"><span>Subscribe</span></a>
+        </div>
+        
+        
+        <div id="CompanyNewsCommentary_ReadMore">
+            <div class="view-all-anchor">
+                More <a href="https://www.nasdaq.com/symbol/msft/news-headlines" id="quotes_content_left_CMCId_readmore">MSFT&nbsp;<span>News &amp; Commentary</span></a>
+            </div>
+            <div class="clearB marginT5px"></div>
+            <div class="view-all-anchor">
+                Read <a href="https://www.nasdaq.com/symbol/msft/press-releases" id="quotes_content_left_CMCId_readpress">MSFT&nbsp;<span>Press Releases</span></a>
+            </div>
+        </div>
+        
+    </div>
+    <div class="clearB"></div>
+    
+</div>
+<div class="clearB"></div>
+
+<!--// End -- /aspx/CompanyNewsCommentary.ascx -->
+        </form>
+		<div class="clearB"></div>
+        
+        <div id="qtopAd-graybg-inside">
+            <script type="text/javascript">
+                makeAd('8', '980x20,300x25', 'mop', is_dartZone, '', '');
+            </script>
+        </div>
+
+        <div class="clearB"></div>
+        <br />
+
+		<div id="last-five-wrap" class="genTable">
+		    <a href="https://www.nasdaq.com/symbol/msft/time-sales"></a>
+			<div class="relativeP">
+			    <h2>Last Five Real-Time Trades</h2>
+                <div>
+                    <script type="text/javascript" language="JavaScript">makeAd('5', '88x31', is_dartSite, is_dartZone, '', '');</script>
+                </div>
+			</div>
+		    <table class="NLSTable" id="NLSTable_Table">
+			    
+			            <thead>
+			                <tr>
+				                <th>NLS Time (ET)</th>
+				                <th>NLS Price</th>
+				                <th>NLS Share Volume</th>
+			                </tr>
+			            </thead>
+			            <tbody>
+			        
+			            <tr>
+				            <td>16:00:04</td>
+				            <td>$115.91&nbsp;</td>
+				            <td>600</td>
+			            </tr>
+			        
+			            <tr>
+				            <td>16:00:04</td>
+				            <td>$115.91&nbsp;</td>
+				            <td>373</td>
+			            </tr>
+			        
+			            <tr>
+				            <td>16:00:04</td>
+				            <td>$115.91&nbsp;</td>
+				            <td>77</td>
+			            </tr>
+			        
+			            <tr>
+				            <td>16:00:04</td>
+				            <td>$115.91&nbsp;</td>
+				            <td>699</td>
+			            </tr>
+			        
+			            <tr>
+				            <td>16:00:04</td>
+				            <td>$115.91&nbsp;</td>
+				            <td>45</td>
+			            </tr>
+			        </tbody>
+		    </table>
+
+		    <div class="floatR marginT10px">
+		        <div class="view-all-anchor">
+			        See <a href="https://www.nasdaq.com/symbol/msft/time-sales"><span>All Trades</span></a>
+		        </div>
+		    </div>
+		    <div class="clearB paddingT5px"></div>
+            <small>
+                The last real-time five trades feature is not available during the
+                <br /><a href="https://www.nasdaq.com/symbol/msft/premarket">Pre-Market</a>, 
+                nor the <a href="https://www.nasdaq.com/symbol/msft/after-hours">After Hours</a>. Visit the respective link for the trading information in that session. 
+            </small>
+		</div>
+
+        <div class="clearB"></div>
+        <br />
+
+        
+        <div id="rcjsload_9b145e"></div>
+        <script type="text/javascript">
+            (function() {
+            var referer="";try{if(referer=document.referrer,"undefined"==typeof referer||""==referer)throw"undefined"}catch(exception){referer=document.location.href,(""==referer||"undefined"==typeof referer)&&(referer=document.URL)}referer=referer.substr(0,700);
+            var rcds = document.getElementById("rcjsload_9b145e");
+            var rcel = document.createElement("script");
+            rcel.id = 'rc_' + Math.floor(Math.random() * 1000);
+            rcel.type = 'text/javascript';
+            rcel.src = "//trends.revcontent.com/serve.js.php?w=100073&t="+rcel.id+"&c="+(new Date()).getTime()+"&width="+(window.outerWidth || document.documentElement.clientWidth)+"&referer="+referer;
+            rcel.async = true;
+            rcds.appendChild(rcel);
+            })();
+        </script>
+
+        <div class="clearB"></div>
+        <br />
+
+        <!--Smartad # 4722: Nasdaq - Below Quotes Desktop - 820x270-->
+        <iframe WIDTH="820" HEIGHT="270" SCROLLING="NO" src="//www.dianomi.com/smartads.epl?id=4722"  style="width: 100%; height: 270px; border: none; overflow: hidden;"></iframe>
+
+        <div class="clearB"></div>
+        <br />
+
+		<div id="stock-rating-target">
+            <div class="genTable">
+                <h2>Stock Rating / Target Est.</h2>
+			    <table>
+			        <thead>
+                        <tr>
+                            <th>Community Rating</th>
+                            <th>1 Year Target</th>
+                        </tr>
+			        </thead>
+			        <tbody>
+				        <tr>
+					        <td>
+<div class="comm_rating">
+    <div id="ratingtext">
+        <a id="quotes_content_left_OverallStockRating1_hlIconLink" href="https://community.nasdaq.com/community-ratings.aspx?stockticker=MSFT">
+		    <img src="https://www.nasdaq.com/images/bullish-icon.png" width="30" height="30" alt="Rate&#32;Microsoft&#32;Corporation" class="paddingR10px" />
+        </a>
+        <div style="margin:-31px 0 0 43px"><span id="quotes_content_left_OverallStockRating1_lblPercentage" class="comm_bullrating">84% bullish</span>&nbsp;<span id="quotes_content_left_OverallStockRating1_lblTotalRatingsCount">of 855 ratings</span></div>
+    </div>
+    <a id="quotes_content_left_OverallStockRating1_hlStockSymbol" title="Rate MSFT" class="comm_rateit" href="https://community.nasdaq.com/community-ratings.aspx?stockticker=MSFT" style="padding-left:0;float:left;">Rate it</a>
+</div></td>
+					        <td><span id="quotes_content_left__1YearTargetEstimate">$125</span></td>
+				        </tr>
+			        </tbody>
+                </table>
+
+                <h2>NASDAQ Official Price</h2>
+                <table>
+                    <thead>
+				        <tr>
+					        <th>Open Price / Date</th>
+					        <th>Close Price / Date</th>
+				        </tr>
+                    </thead>
+                    <tbody>
+				        <tr>
+					        <td><div><span id="quotes_content_left__NOOPAndDate">$115.25/Mar. 15, 2019</span></div></td>
+					        <td><div><span id="quotes_content_left__NOCPAndDate">$115.91/Mar. 15, 2019</span></div></td>
+				        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="floatR marginT10px view-all-anchor">
+                Learn more about <a href="https://www.nasdaq.com/quotes/real-time.aspx"><span>Real Time Quotes</span></a>
+            </div>
+		</div>
+        <div class="clearB"></div>
+        <br />
+
+        <div id="slot1"></div>
+							
+	
+
+        <!-- end graph div -->
+        <div class="prev-viewed_holder">
+        </div><!-- end prev viewed holder div -->
+
+
+
+
+            </div><!--// end left-column-div-->
+        </div><!--// end quotes-left-content -->
+	</div><!--// end content -->
+    <div id="right-column-div">
+        
+    <div id="sticky-container1" style="margin-bottom:400px;width:300px">
+        <script type="text/javascript">
+        if (quoteBoxSelectedSymbol != "VNTH" && quoteBoxSelectedSymbol != "NDAQ" && quoteBoxSelectedSymbol != "GLRI") {
+        if (getAdRotatorRandom(0))
+        {
+            if (selected_symbol != "QQQE")
+                makeAd('', '300x250,300x600', is_dartSite, is_dartZone, '', '');
+            else
+                makeAd('', '300x250,300x600', 'quotes', 'drxticker_qe', '', '');
+        }
+        else
+            makeAd('', '300x250,300x600', 'quotes', 'nls', '', '');
+        }
+        </script>
+
+        <div class="clearB"></div>
+        <div class="divider"></div>
+
+        
+
+<div>
+    <h2>Stock Market Today</h2>
+    <div class="floatL marginT5px">
+        <a href="https://www.nasdaq.com/article/dow-set-for-a-higher-open-tuesday-ahead-of-donald-trumps-state-of-the-union-address-cm1093161" onclick="triggerAsyncOmnitureClickEvent('home:stock-market-today:stocks-to-watch')" style="overflow: hidden; display: inline-block; width: 125px; height: 125px">
+            <img src="https://www.nasdaq.com/reference/hiresphotos/news-photos/Finance4/325x200/finance61.jpg" width="" height="125" alt="" />
+        </a>
+    </div>
+    <div class="floatR" style="width: 53%">
+        <h3>Stocks to Watch</h3>
+        <div class="clearB padding5px"></div>
+        <!--
+        <small>2/05/2019,&#32;06:52&#32;AM</small>
+        <div class="clearB paddingB5px"></div>
+        -->
+        <h3>
+            <a href="https://www.nasdaq.com/article/dow-set-for-a-higher-open-tuesday-ahead-of-donald-trumps-state-of-the-union-address-cm1093161" onclick="triggerAsyncOmnitureClickEvent('right-rail:stock-market-today:stocks-to-watch')" class="fontS14px displayIB paddingR10px">
+                  Dow Set for a Higher Open Tuesday Ahead of Donald Trump's State of the Union Address
+            </a>
+        </h3>
+    </div>
+    <div class="clearB padding5px"></div>
+    <br />
+    <div class="floatR">
+        <div class="floatL paddingT5px paddingR10px">
+            <h5>Featured Story from</h5>
+        </div>
+        <div class="floatL hideFlow">
+            <img src="https://www.nasdaq.com/images/barronslogo120x30.jpg" width="110" />
+        </div>
+    </div>
+</div>
+
+
+        <div class="clearB"></div>
+        <div class="divider"></div>
+
+        <!--
+          ~ Copyright (C) 2014 Media.net Advertising FZ-LLC All Rights Reserved
+        -->
+        <div id="489283227">
+            <script type="text/javascript">
+                try {
+                    window._mNHandle.queue.push(function () {
+                        window._mNDetails.loadTag("489283227", "300x200", "489283227");
+                    });
+                }
+                catch (error) {
+                }
+            </script>
+        </div>
+
+        <div class="clearB"></div>
+        <div class="divider"></div>
+
+        
+        <!--Smartad # 4749: Nasdaq - Right Rail Quotes Desktop - 300x450-->
+        <iframe WIDTH="300" HEIGHT="450" SCROLLING="NO" src="//www.dianomi.com/smartads.epl?id=4749"  style="width: 300px; height: 450px; border: none; overflow: hidden;"></iframe>
+
+        <div class="clearB"></div>
+        <br />
+        <div class="divider"></div>
+        <div class="clearB"></div>
+        <br />
+
+        <script type="text/javascript">
+            makeAd('', '300x250,300x600', 'mop', is_dartZone, '', '');
+        </script>
+
+        <div id="slot2"></div>
+        <script type="text/javascript">makeDeferredAd('', '300x250,300x600,160x600', 'btf', is_dartZone, 'slot2');</script>
+
+        <div class="clearB"></div>
+        <div class="divider"></div>
+
+        <!--// begin /includes/right-rail-promo300x.inc -->
+
+<div class="clearB"></div>
+<a href="https://stocktracker.nasdaq.com/smart-portfolio/welcome" onclick="triggerAsyncOmnitureClickEvent('right-rail:smart-portfolio:overview')">
+	<img src="/images/NasdaqSP-promo01.jpg" width="300" height="150" alt="Smart Portfolio" />
+</a>
+<div class="clearB"></div>
+
+<!--// end /includes/right-rail-promo300x.inc -->
+
+        <div class="clearB"></div>
+        <div class="divider"></div>
+
+        <div id="slot3"></div>
+        <script type="text/javascript">makeDeferredAd('', '300x250', 'btf', 'Dianomi', 'slot3');</script>
+    </div>
+
+    </div><!--// end right-column-div-->
+    <!-- START Google Ads includes/footer_googAd.inc-->
+
+<div class="clearB"></div>
+<br /><br />
+
+<div class="footer_googAd marginLAuto marginRAuto" style="width:728px;">
+  <div id="footerAd"></div><!-- placeholder for footer ad -->
+  <script>
+    footerAdDisplay();
+  </script>
+</div>
+
+<!-- END Google Ads includes/footer_googAd.inc-->
+
+
+    <div id="back-to-top" title="Scroll back to top" onclick="triggerAsyncOmnitureClickEvent('master:global-object:back-to-top')"><span></span></div>
+</div><!--// end wrap-->
+<!-- begin includes/fixedFooter.inc-->
+<!--// begin footer -->
+<footer class="site__footer">
+	<div class="site__footer--primary">
+		<div class="wrapper">
+			<a href="https://www.nasdaq.com/" class="logo">
+				<div></div>
+			</a>
+			<div class="floatR">
+				<a href="https://www.facebook.com/NASDAQ" class="icon icon-facebook">
+					<span></span>
+				</a>
+				<a href="https://twitter.com/nasdaq" class="icon icon-twitter">
+					<span></span>
+				</a>
+				<a href="https://plus.google.com/+nasdaq" class="icon icon-google-plus">
+					<span></span>
+				</a>
+			</div>
+		</div>
+	</div>
+	<div class="site__footer--secondary">
+		<div class="wrapper">
+			<nav class="site__footer__nav">
+				<ul>
+					<li><a href="https://www.nasdaq.com/" title="Nasdaq"><strong>Nasdaq.com</strong></a></li>
+					<li><a href="https://www.nasdaq.com/quotes/company-news.aspx" title="Company News">Company News</a><span>&#47;</span></li>
+					<li><a href="https://www.nasdaq.com/services/annual-reports.aspx" title="Annual Report">Annual Report</a><span>&#47;</span></li>
+					<li><a href="https://www.nasdaq.com/help/contact-information.aspx" title="Contact">Contact</a><span>&#47;</span></li>
+          <li><a href="https://business.nasdaq.com/discover/careers/index.html" title="Careers">Careers</a><span>&#47;</span></li>
+					<li><a href="https://www.nasdaq.com/help/nasdaq-advertising.aspx" title="Advertise on Nasdaq.com">Advertise on Nasdaq.com</a><span>&#47;&nbsp;</span></li><li><a href="https://m.nasdaq.com/symbol/msft/real-time" onclick="mobileModule.accessMobileSite();">Mobile Version</a></li>
+				</ul>
+				<ul class="lighter">
+					<li><a href="https://www.nasdaq.com/about/terms.aspx" title="Terms of Use">Terms of Use</a><span>&#47;</span></li>
+					<li><a href="https://business.nasdaq.com/privacy-statement/" title="Privacy Policy">Privacy Policy</a><span>&#47;</span></li>
+					<li><a href="https://www.nasdaq.com/help/sitemap.aspx" title="Sitemap">Sitemap</a><span>&#47;</span></li>
+					<li><a href="https://www.nasdaq.com/investing/glossary/" title="Glossary">Glossary</a><span>&#47;</span></li>
+					<li><a href="https://www.nasdaq.com/feedback/" title="Feedback">Feedback</a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</footer>
+<!--// end footer -->
+<!-- begin lightbox backdrop -->
+<table class="backdrop" id="backdrop">
+	<tr>
+		<td>
+			<!-- begin lightboxness -->
+			<div class="lightbox edit-stocks" id="edit-stocks">
+				<!-- close button-->
+				<span class="close">CLOSE<span class="x">X</span></span>
+				<div class="floatL">
+					<h2><center>Edit Favorites</center></h2>
+					<!-- text -->
+					<p>Enter up to 25 symbols separated by commas or spaces in the text box below. These symbols will be available during your session for use on applicable pages.</p>
+					<!-- input box -->
+					<div class="floatL">
+						<textarea onkeypress="if(event.keyCode ==13){nasdaqIndexRow.myListGo()}else if(event.keyCode == 27){$('.close').click();}" id="myListInput" name="myListInput" cols="35" rows="3" class="fontS14px"></textarea>
+					</div>
+					<!-- right side controls -->
+					<div class="floatL marginL10px">
+						<a href="javascript:void(0)" class="lightgreen-button marginB5px TalignC" onclick="nasdaqIndexRow.myListGo();">Update</a>
+						<br />
+						<a href="javascript:void(0)" class="red-button" onclick="nasdaqIndexRow.clearMyList();">Clear List</a>
+					</div>
+				</div>
+			</div>
+			<!-- end lightboxness -->
+			<!-- begin lightboxness -->
+			<div class="lightbox stock-searches" id="stock-searches">
+				<!-- close button-->
+				<span class="close">CLOSE<span class="x">X</span></span>
+				<h2>Customize your NASDAQ.com experience</h2>
+				<b>Background Color Selector</b>
+				<br />
+				<span>Select the background color of your choice:</span>
+				<div class="clearB"></div>
+				<div id="BgSelector">
+					<div>
+						<div class="BgSelector-1">
+							<div class="floatL">
+								<input type="radio" name="themepreference" value="blackg" onclick="updateSiteTheme(this.value)">&nbsp;Black
+							</div>
+							<div class="BgSelector-color"></div>
+						</div>
+						<div class="clearB"></div>
+						<div class="BgSelector-2">
+							<div class="floatL">
+								<input type="radio" name="themepreference" value="slateg" onclick="updateSiteTheme(this.value)">&nbsp;Slate Gray
+							</div>
+							<div class="BgSelector-color"></div>
+						</div>
+					</div>
+					<div>
+						<div class="BgSelector-3">
+							<div class="floatL">
+								<input type="radio" name="themepreference" value="lightg" onclick="updateSiteTheme(this.value)">&nbsp;Light Gray
+							</div>
+							<div class="BgSelector-color"></div>
+						</div>
+						<div class="clearB"></div>
+						<div class="BgSelector-4">
+							<div class="floatL">
+								<input type="radio" name="themepreference" value="grayb" onclick="updateSiteTheme(this.value)">&nbsp;Gray Blue
+							</div>
+							<div class="BgSelector-color"></div>
+						</div>
+					</div>
+				</div>
+				<div class="clearB"></div>
+				<hr /><br />
+				<b>Quote Search</b>
+				<br />
+				<span>Select a default target page for your quote search:</span>
+				<div id="QuoteSetting">
+					<div>
+						<input type="radio" name="quotepreference" value="realtime" onclick="Nasdaq_Quotesearch.confirmUserPref(this.value)">
+						&nbsp;Real-Time<br />
+						<input type="radio" name="quotepreference" value="afthours" onclick="Nasdaq_Quotesearch.confirmUserPref(this.value)">
+						&nbsp;After Hours<br />
+						<input type="radio" name="quotepreference" value="premkt" onclick="Nasdaq_Quotesearch.confirmUserPref(this.value)">
+						&nbsp;Pre-Market<br />
+						<input type="radio" name="quotepreference" value="compnews" onclick="Nasdaq_Quotesearch.confirmUserPref(this.value)">&nbsp;News
+					</div>
+					<div>
+						<input type="radio" name="quotepreference" value="flash" onclick="Nasdaq_Quotesearch.confirmUserPref(this.value)">
+						&nbsp;Flash Quote<br />
+						<input type="radio" name="quotepreference" value="summary" onclick="Nasdaq_Quotesearch.confirmUserPref(this.value)">
+						&nbsp;Summary Quote<br />
+						<input type="radio" name="quotepreference" value="dyncharts" onclick="Nasdaq_Quotesearch.confirmUserPref(this.value)">
+						&nbsp;Interactive Charts<br />
+						<input type="radio" name="quotepreference" value="default" onclick="Nasdaq_Quotesearch.confirmUserPref(this.value)">
+						&nbsp;Default Setting<br />
+					</div>
+				</div>
+				<div class="clearB"></div>
+				<span>
+					Please note that once you make your selection, it will apply to all future visits to NASDAQ.com.
+					If, at any time, you are interested in reverting to our default settings, please select Default Setting above.
+					<br /><br />
+					If you have any questions or encounter any issues in changing your default settings, please email <a href="mailto:isfeedback@nasdaq.com?Subject=Default%20Settings%20Inquiry">isfeedback@nasdaq.com</a>.
+				</span>
+			</div>
+			<!-- end lightboxness -->
+			<!-- begin lightboxness -->
+			<div class="lightbox" id="confirm">
+				<!-- close button-->
+				<span class="close">CLOSE<span class="x">X</span></span>
+				<h4>Please confirm your selection:</h4>
+				<p>
+					You have selected to change your default setting for the Quote Search. This will now be your default target page;
+					unless you change your configuration again, or you delete your
+					cookies. <b>Are you sure you want to change your settings?</b>
+				</p>
+				<div>
+					<button class="floatL"  onclick="Nasdaq_Quotesearch.confirmHandler('defaultQuote', true)">YES</button>
+					<button class="floatR"  onclick="Nasdaq_Quotesearch.confirmHandler('defaultQuote', false)">NO</button>
+				</div>
+			</div>
+			<!-- end lightboxness -->
+		</td>
+	</tr>
+</table>
+<!-- end lightbox backdrop -->
+<table class="backdrop" id="globalCustomModal">
+	<tr>
+		<td>
+            <!-- begin lightboxness -->
+            <div class="lightbox" id="adBlockMsg">
+				<!-- close button-->
+				<span class="close" onclick="close_global_modal()">CLOSE<span class="x">X</span></span>
+				<!-- <h2><center>We have a favor to ask</center></h2> -->
+				<!-- text -->
+				<p id="adBlockMsgText">Please disable your ad blocker (or <a href="https://www.nasdaq.com/help/adblock-instructions.aspx">update your settings</a> to ensure that javascript and cookies are enabled), so that we can continue to provide you with the first-rate market news and data you've come to expect from us.</p>
+			</div>
+            <!-- end lightboxness -->
+			<!-- begin lightboxness -->
+            <div class="lightbox" id="interstitialAdContainer" style="width:705px;height:575px">
+				<!-- close button-->
+				<span class="close" onclick="close_global_modal()">CLOSE<span class="x">X</span></span>
+				<!-- <h2><center>Sponsor Message</center></h2> -->
+				<!-- text -->
+				<p id="interstitialContainer"></p>
+			</div>
+            <!-- end lightboxness -->
+         </td>
+	</tr>
+</table>
+
+<!-- Omniture code -->
+
+<!--********************BEGIN  ../includes/omniture.inc***********************-->
+
+<!-- SiteCatalyst code version: H.1.
+Copyright 1997-2005 Omniture, Inc. More info available at https://www.omniture.com -->
+<script language="JavaScript" type="text/javascript" src="https://www.nasdaq.com/includes/s_code-072016v1.js?v=03012016"></script>
+
+
+<script type="text/javascript" language="JavaScript">
+
+<!--
+if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')
+//--></script>
+
+<noscript><img
+src="https://nasdaq.122.2O7.net/b/ss/nasdaqprod/1/H.1--NS/0"
+height="1" width="1" border="0" alt="" /></noscript><!--/DO NOT REMOVE/-->
+<!-- End SiteCatalyst code version: H.1. -->
+<!-- setSectionName() moved to js file: masthead_default.js -->
+
+
+<!--*********************End  ../includes/omniture.inc*******************************-->
+
+
+<script type="text/javascript">
+//<![CDATA[
+setSectionName(propVar);
+//]]>
+</script>
+
+<!-- Begin BlueKai Tag --> 
+<iframe name="__bkframe" height="0" width="0" frameborder="0" style="display:none;position:absolute;clip:rect(0px 0px 0px 0px)" src="about:blank"></iframe> 
+<script type="text/javascript" src="https://tags.bkrtx.com/js/bk-coretag.js"></script> 
+<script type="text/javascript">
+
+bk_addPageCtx('is_dartSite', (typeof(is_dartSite)!=='undefined')?is_dartSite:'');
+bk_addPageCtx('is_dartZone', (typeof(is_dartZone)!=='undefined')?is_dartZone:'');
+bk_addPageCtx('propVar', (typeof(propVar)!=='undefined')?propVar:'');
+bk_addPageCtx('propVar15', (typeof(propVar15)!=='undefined')?propVar15:'');
+bk_addPageCtx('SymbolType', (typeof(SymbolType)!=='undefined')?SymbolType:'');
+bk_addPageCtx('StockIndustry', (typeof(StockIndustry)!=='undefined')?StockIndustry:'');
+bk_addPageCtx('ArticlePrimaryCategory', (typeof(ArticlePrimaryCategory)!=='undefined')?ArticlePrimaryCategory:'');
+ 
+bk_doJSTag(31843, 1); 
+</script> 
+<!-- End BlueKai Tag -->
+
+<!-- begin Enerprise Florida survey -->
+<script>
+/*
+(function(){
+if(document.referrer=="https://www"+host_Extension+".nasdaq.com/markets/ipos/" 
+	&& document.location.href!="https://www"+host_Extension+".nasdaq.com/markets/ipos/"
+	&& get_cookie_value("EnterpriseFloridaSurvey")==false)
+{
+	set_cookie_value("EnterpriseFloridaSurvey","true",3);
+	(function(t,e,s,n){var o,c,a;t.SMCX=t.SMCX||[],e.getElementById(n)||(o=e.getElementsByTagName(s),c=o[o.length-1],a=e.createElement(s),a.type="text/javascript",a.async=!0,a.id=n,a.src=["https:"===location.protocol?"https://":"https://","widget.surveymonkey.com/collect/website/js/DrqdalJhvDd5ACgCO0mDpO1m7_2FEv_2BICPaYzBfwyQJ8_2BsY6t3mPJl0hh2FGypTiFu.js"].join(""),c.parentNode.insertBefore(a,c))})(window,document,"script","smcx-sdk");
+}
+else if(document.location.href=="https://www"+host_Extension+".nasdaq.com/markets/gold.aspx"
+	&& get_cookie_value("EnterpriseFloridaSurvey")==false)
+  {
+  set_cookie_value("EnterpriseFloridaSurvey","true",7);
+  (function(e,t,n,o){var s,c,i;e.SMCX=e.SMCX||[],t.getElementById(o)||(s=t.getElementsByTagName(n),c=s[s.length-1],i=t.createElement(n),i.type="text/javascript",i.async=!0,i.id=o,i.src=["https:"===location.protocol?"https://":"https://","widget.surveymonkey.com/collect/website/js/zlERY9yXVqREVYHr6ZdqhDNMqk2NLii_2Fefbn4hZPEGkz2TEDYuhOlBtXpQe_2FgiXz.js"].join(""),c.parentNode.insertBefore(i,c))})(window,document,"script","smcx-sdk");
+  }
+  })();
+  */
+
+  //deferred actions
+
+  //deferred actions
+  $(window).on('load', function () {
+  addScript("https://www.nasdaq.com/includes/nasdaqdeferred.min-04242018v1.js", true, "deferredActions()");
+  });
+
+</script>
+<!-- end Enterprise Florida survey -->
+
+<!-- end includes/fixedFooter.inc-->
+
+<!-- START page bottom script -->
+<script type="text/javascript">
+    $(document).ready(function () {
+        setTimeout(function () {
+            initStickyContent();
+        }, 5000);
+    });
+
+    function initStickyContent() {
+        initStickyContent1();
+        //initStickyContent2();
+    }
+
+    function initStickyContent1() {
+        var stickyContainer = $('#sticky-container1');
+        if (stickyContainer.length == 0) return;
+
+        var stickyTop = stickyContainer.offset().top - 85;
+        var sheight = stickyContainer.height();
+        var bottom = $('#footerAd').offset().top - 120;
+        //var bottom = 940;
+        var distance = bottom - stickyTop - sheight;
+        var currentlyStickied = false;
+        var disableSticky = false;
+        $(window).scroll(function () {
+            var windowTop = $(window).scrollTop();
+            if (!disableSticky) {
+                if (stickyTop < windowTop) {
+                    if ((windowTop + sheight) < bottom) {
+                        if (!currentlyStickied) {
+                            stickyContainer.css({ position: 'fixed', top: "85px" });
+                            currentlyStickied = true;
+                        }
+                    }
+                    else {
+                        if (currentlyStickied) {
+                            stickyContainer.css('position', 'static');
+                            currentlyStickied = false;
+                            disableSticky = true;
+                        }
+                    }
+                }
+                else {
+                    if (currentlyStickied) {
+                        stickyContainer.css('position', 'static');
+                        currentlyStickied = false;
+                    }
+                }
+            }
+        });
+
+    }
+
+    function initStickyContent2() {
+        var stickyContainer = $('#sticky-container2');
+        if (stickyContainer.length == 0) return;
+
+        var stickyTop = stickyContainer.offset().top - 85;
+        var sheight = stickyContainer.height();
+        var bottom = $('#footerAd').offset().top - 120;
+        var distance = bottom - stickyTop - sheight;
+        var currentlyStickied = false;
+        $(window).scroll(function () {
+            var windowTop = $(window).scrollTop();
+            if (stickyTop < windowTop) {
+                if ((windowTop + sheight) < bottom) {
+                    if (!currentlyStickied) {
+                        stickyContainer.css({ position: 'fixed', top: "85px" });
+                        currentlyStickied = true;
+                    }
+                }
+                else {
+                    if (currentlyStickied) {
+                        stickyContainer.css({ position: 'relative', top: distance + "px" });
+                        currentlyStickied = false;
+                    }
+                }
+            }
+            else {
+                if (currentlyStickied) {
+                    stickyContainer.css('position', 'static');
+                    currentlyStickied = false;
+                }
+            }
+        });
+    }
+    var nasdaqHighChart = function () {
+        var symbol = 'MSFT', intradayChart = null, updateInterval = null, maxtime = server_time.getTime(), //hang onto the highest X value
+    datavalues = [], intradayHighX = null, intradayLowX = null, volumedata = [], superpricedata = [], subpricedata = [], maxvol = 0, ymin, ymax = 0, ypadding = 15, flagdata = null, stopUpdating = false;
+
+        function dataSearch(values, find) {
+            var low = 0, high = values.length - 1, i = 0, comparison;
+            while (low <= high) {
+                i = Math.floor((low + high) / 2);
+                comparison = values[i].x - find;
+                if (comparison < 0) { low = i + 1; continue; }
+                if (comparison > 0) { high = i - 1; continue; }
+                return i;
+            }
+
+            i = Math.floor((low + high) / 2);
+            //bounds checking
+            if (i < 0) { return 0; }
+            if (i == values.length - 1) { return i; }
+            return i;
+        };
+
+        function compare(a, b) {
+            return a.x - b.x;
+        }
+
+        //looks in data values for the last point to the left of this X value.
+        function search(xpoint) {
+            return datavalues[dataSearch(datavalues, xpoint)];
+        }
+
+        function populateArrays(resultdata, chartmin, chartmax, previousClose) {
+            var prevx = 0, prevprice = previousClose;
+
+            datavalues = [];
+            volumedata = [];
+            superpricedata = [];
+            subpricedata = [];
+            maxvol = 0;
+            intradayHighX = 0;
+            intradayLowX = 0;
+
+            $.each(resultdata, function (dataindex, datavalue) {
+                maxvol = Math.max(maxvol, this.volume);
+                maxtime = Math.max(zx, maxtime);
+
+                //strip out seconds and milliseconds
+                var zx = Math.floor(this.x / 60000) * 60000;
+                volumedata.push([zx, this.volume]);
+                if (this.price === chartmin && intradayLowX === 0) {
+                    intradayLowX = zx;
+                }
+                if (this.price === chartmax && intradayHighX === 0) {
+                    intradayHighX = zx;
+                }
+
+                //keep triangles from happening.
+                if ((zx - prevx) > 60000 && this.price !== prevprice && prevx !== 0) {
+
+                    if (prevprice >= previousClose) {
+                        subpricedata.push([zx - 60000, previousClose, previousClose]);
+                        superpricedata.push([zx - 60000, previousClose, prevprice]);
+                    }
+
+                    if (prevprice <= previousClose) {
+                        subpricedata.push([zx - 60000, prevprice, previousClose]);
+                        superpricedata.push([zx - 60000, previousClose, previousClose]);
+                    }
+                }
+
+                if (this.price >= previousClose) {
+                    superpricedata.push([zx, previousClose, this.price]);
+                    subpricedata.push([zx, previousClose, previousClose]);
+                }
+                if (this.price <= previousClose) {
+                    subpricedata.push([zx, this.price, previousClose]);
+                    superpricedata.push([zx, previousClose, previousClose]);
+                }
+
+                datavalues.push({
+                    "x": zx,
+                    "price": this.price,
+                    "volume": this.volume
+                });
+
+                prevx = zx;
+                prevprice = this.price;
+            });
+        }
+
+        function updateArrays(resultdata, chartmin, chartmax, previousClose) {
+            var prevx = 0, prevprice = previousClose;
+
+            if (resultdata[0].price == datavalues[datavalues.length - 1].price && resultdata[0].volume == datavalues[datavalues.length - 1].volume) {
+                //values are the same, no update needed so stop here
+                return false;
+            }
+
+            $.each(resultdata, function (dataindex, datavalue) {
+                maxvol = Math.max(maxvol, this.volume);
+                maxtime = Math.max(zx, maxtime);
+
+                //strip out seconds and milliseconds
+                var zx = Math.floor(this.x / 60000) * 60000;
+                volumedata.push([zx, this.volume]);
+                if (this.price === chartmin && intradayLowX === 0) {
+                    intradayLowX = zx;
+                }
+                if (this.price === chartmax && intradayHighX === 0) {
+                    intradayHighX = zx;
+                }
+
+                //keep triangles from happening.
+                if ((zx - prevx) > 60000 && this.price !== prevprice && prevx !== 0) {
+
+                    if (prevprice >= previousClose) {
+                        subpricedata.push([zx - 60000, previousClose, previousClose]);
+                        superpricedata.push([zx - 60000, previousClose, prevprice]);
+                    }
+
+                    if (prevprice <= previousClose) {
+                        subpricedata.push([zx - 60000, prevprice, previousClose]);
+                        superpricedata.push([zx - 60000, previousClose, previousClose]);
+                    }
+                }
+
+                if (this.price >= previousClose) {
+                    superpricedata.push([zx, previousClose, this.price]);
+                    subpricedata.push([zx, previousClose, previousClose]);
+                }
+                if (this.price <= previousClose) {
+                    subpricedata.push([zx, this.price, previousClose]);
+                    superpricedata.push([zx, previousClose, previousClose]);
+                }
+
+                datavalues.push({
+                    "x": zx,
+                    "price": this.price,
+                    "volume": this.volume
+                });
+
+                prevx = zx;
+                prevprice = this.price;
+            });
+
+            return true;
+        }
+
+        function onDataReceived(result) {
+            if (typeof result.error != "undefined") {
+                onChartErrorReceived(result);
+                return;
+            }
+            var xpaddingl = 155,
+            xpaddingr = 240, //this is the # of minutes after the chart end time to pad. Always leave at least 15.
+            ystartOnTick = false,
+            yendOnTick = false;
+
+            ypadding = Math.round(10 * (result.ChartMax - result.ChartMin)) / 250;  //an attempt to be smarter about padding.
+            ymin = result.ChartMin - ypadding;
+            ymax = result.ChartMax + ypadding;
+
+            if (result.PreviousClose <= result.ChartMin) {
+                ymin = result.PreviousClose - ypadding;
+                ystartOnTick = false;
+            }
+            if (result.PreviousClose >= result.ChartMax) {
+                ymax = result.PreviousClose + ypadding;
+                yendOnTick = false;
+            }
+
+            populateArrays(result.data, result.ChartMin, result.ChartMax, result.PreviousClose);
+
+            intradayChart = new Highcharts.StockChart({
+                chart: {
+                    renderTo: "chartcontainer",
+                    alignTicks: false,
+                    marginLeft: 0,
+                    spacingLeft: 0,
+                    marginRight: 50,
+                    spacingRight: 0
+                },
+                xAxis: {
+                    type: 'datetime',
+                    dateTimeLabelFormats: {
+                        hour: '%l:%M %p',
+                        minute: '%l:%M %p'
+                    },
+                    allowDecimals: false,
+                    ordinal: false,
+                    startOnTick: false,
+                    endOnTick: false,
+                    min: result.OpenTime - (xpaddingl * 60 * 1000),
+                    max: result.CloseTime + (xpaddingr * 60 * 1000),
+                    plotLines: [{
+                        color: '#66aed1',
+                        value: result.OpenTime,
+                        width: 3
+                    },
+            {
+                color: '#66aed1',
+                value: result.CloseTime,
+                width: 3
+            }]
+                },
+                yAxis: [{
+                    title: { text: '' },
+                    labels: {
+                        align: 'left',
+                        x: 0,
+                        formatter: function () {
+                            return "$" + Highcharts.numberFormat(this.value, 2);
+                        }
+                    },
+                    offset: 0,
+                    height: 150,
+                    startOnTick: ystartOnTick,
+                    endOnTick: yendOnTick,
+                    min: ymin,
+                    max: ymax,
+                    tickPixelInterval: 30,
+                    opposite: true,
+                    plotLines: [{
+                        color: 'black',
+                        width: 2,
+                        value: result.PreviousClose,
+                        id: "previousClose",
+                        zIndex: 4
+                    },
+            {
+                color: 'black',
+                width: 1,
+                value: ymin,
+                id: "Barrier",
+                zIndex: 2
+            }]
+                },
+        {
+            title: { text: '' },
+            labels: {
+                align: 'left',
+                x: 0
+            },
+            offset: 0,
+            startOnTick: true,
+            endOnTick: false,
+            min: 0,
+            max: maxvol,
+            top: 175,
+            height: 75,
+            tickPixelInterval: 20,
+            opposite: true,
+            lineWidth: 0
+        }
+                ],
+                legend: {
+                    enabled: false
+                },
+                credits: {
+                    enabled: false
+                },
+                scrollbar: {
+                    enabled: false
+                },
+                rangeSelector: {
+                    enabled: false
+                },
+                navigator: {
+                    enabled: false
+                },
+                exporting: {
+                    enabled: false
+                },
+                tooltip: {
+                    borderColor: '#000000',
+                    formatter: function () {
+                        var tmp = this.x, tmpval = null, tt = '', fprice = '', fpcl;
+                        tmpval = search(tmp);
+                        if (tmpval) {
+                            tt = 'Time: <b>' +
+                    Highcharts.dateFormat("%l:%M %p", tmpval.x)
+                    + '</b><br />Last: <b>$'
+                    + Highcharts.numberFormat(tmpval.price, 2)
+                    + '</b><br />PCL: <b>$'
+                    + Highcharts.numberFormat(result.PreviousClose, 2)
+                    + '</b><br />Shares: <b>' + Highcharts.numberFormat(tmpval.volume, 0)
+                    + '</b>';
+                            if (tmpval.x === intradayHighX) {
+                                tt += '<br /><b>Intraday High</b>';
+                            }
+                            if (tmpval.x === intradayLowX) {
+                                tt += '<br /><b>Intraday Low</b>';
+                            }
+                            return tt;
+                        }
+                        else return false;
+                    }
+                },
+                subtitle: {
+                    text: 'Volume',
+                    floating: true,
+                    align: 'left',
+                    x: 5,
+                    y: 165,
+                    style: { fontSize: '16px' }
+                },
+                title: { text: '' },
+                series: [
+        {
+            id: 'VOL',
+            name: 'Volume',
+            data: volumedata,
+            lineWidth: 1,
+            type: "column",
+            yAxis: 1,
+            color: '#FFA200'
+        },
+        {
+            id: 'LH',
+            data: subpricedata,
+            lineWidth: 2,
+            type: "arearange",
+            yAxis: 0,
+            color: '#990000',
+            fillColor: {
+                linearGradient: [0, 0, 0, 150],
+                stops: [[0, 'rgb(255,255,255)'],
+                    [1, 'rgb(153,0,0)']]
+            }
+        },
+        {
+            id: 'UH',
+            data: superpricedata,
+            lineWidth: 2,
+            type: "arearange",
+            yAxis: 0,
+            color: '#339900',
+            fillColor: {
+                linearGradient: [0, 0, 0, 150],
+                stops: [[0, 'rgb(51,153,0)'],
+                    [1, 'rgb(255,255,255)']]
+            }
+        },
+        {
+            type: 'line',
+            id: 'flagseriesIL',
+            enableMouseTracking: false,
+            color: '#FFA200',
+            marker: {
+                enabled: true,
+                symbol: 'circle'
+
+            },
+            data: [[intradayLowX, result.ChartMin]]
+        },
+        {
+            type: 'line',
+            id: 'flagseriesIH',
+            enableMouseTracking: false,
+            color: '#FFA200',
+            marker: {
+                enabled: true,
+                symbol: 'circle'
+            },
+            data: [[intradayHighX, result.ChartMax]]
+        }
+                ],
+                plotOptions: {
+                    column: {
+                        dataGrouping: {
+                            groupPixelWidth: 1
+                        },
+                        pointPadding: 0,
+                        borderWidth: 0,
+                        groupPadding: 0
+                    },
+                    series: {
+                        dataGrouping: {
+                            groupPixelWidth: 1
+                        },
+                        pointPadding: 0,
+                        groupPadding: 0,
+                        borderWidth: 0,
+                        connectNulls: true,
+                        shadow: false,
+                        marker: {
+                            enabled: false,
+                            states: {
+                                hover: {
+                                    enabled: false,
+                                    lineWidth: 1
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        function onSummaryErrorReceived(result) {
+            $("#chartcontainer").text("The chart is currently unavailable. In many cases refreshing the page will display the chart.");
+        }
+
+        function onChartErrorReceived(result) {
+            $("#chartcontainer").text("The chart is currently unavailable. In many cases refreshing the page will display the chart.");
+        }
+
+        function GetChartData() {
+            $.ajax({
+                type: "POST",
+                url: "/callbacks/NLSHandler2.ashx",
+                data: "msg=min&symbol=MSFT&qesymbol=MSFT",
+                    dataType: 'json',
+                    success: onDataReceived,
+                    error: onChartErrorReceived
+                });
+            }
+
+        function GetSummaryData() {
+            $.ajax({
+                type: "POST",
+                url: "/callbacks/NLSHandler2.ashx",
+                data: "msg=min&symbol=MSFT&qesymbol=MSFT",
+                    dataType: 'json',
+                    success: onSummaryDataReceived,
+                    error: onSummaryErrorReceived
+                });
+            }
+
+        function onSummaryDataReceived(result) {
+            if (typeof result.error != "undefined") {
+                onSummaryErrorReceived(result);
+                return;
+            }
+            var changed = false;
+            if (intradayHigh !== result.result.high) {
+                intradayHigh = result.result.high;
+                changed = true;
+            }
+            if (intradayLow !== result.result.low) {
+                intradayLow = result.result.low;
+                changed = true;
+            }
+
+            if (changed && !!intradayChart) {
+                //update the plot lines
+                intradayChart.yAxis[0].removePlotLine("High");
+                intradayChart.yAxis[0].removePlotLine("Low");
+                intradayChart.yAxis[0].addPlotLine(
+    {
+        color: 'green',
+        width: 2,
+        value: intradayHigh,
+        id: "High",
+        zIndex: null
+    });
+
+                intradayChart.yAxis[0].addPlotLine(
+    {
+        color: 'red',
+        width: 1,
+        value: intradayLow,
+        id: "Low",
+        zIndex: 10
+    });
+            }
+        }
+
+        function UpdateChart() {
+            if (!stopUpdating) {
+
+                $.ajax({
+                    type: "POST",
+                    url: "/callbacks/NLSHandler2.ashx",
+                        data: "msg=min&max=1&symbol=MSFT",
+                        dataType: 'json',
+                        error: onChartErrorReceived,
+                        success: function (result) {
+                            var dpo, upo, vo, ih, il;
+
+                            if (intradayChart != null)
+                                dpo = intradayChart.series[1], upo = intradayChart.series[2], vo = intradayChart.series[0], ih = intradayChart.series[3], il = intradayChart.series[4];
+
+                            if (!!upo && !!dpo && !!vo && ih && il) {
+                                //Adding the point doesn't show the fill for the area.
+                                //populateArrays(result.data, result.ChartMin, result.ChartMax, result.PreviousClose); //also does maxvol
+                                if (!updateArrays(result.data, result.ChartMin, result.ChartMax, result.PreviousClose)) {
+                                    //newest point is identical to last stored point, don't bother updating stop here
+                                    return;
+                                }
+                                upo.setData(superpricedata, false);
+                                dpo.setData(subpricedata, false);
+                                vo.setData(volumedata, false);
+                                ih.setData([[intradayHighX, result.ChartMax]], false);
+                                il.setData([[intradayLowX, result.ChartMin]], false);
+
+                                ypadding = Math.round(10 * (result.ChartMax - result.ChartMin)) / 250; //an attempt to be smarter about padding.
+                                ymin = result.ChartMin - ypadding;
+                                ymax = result.ChartMax + ypadding;
+                                if (result.PreviousClose <= result.ChartMin) {
+                                    ymin = result.PreviousClose - ypadding;
+                                }
+                                if (result.PreviousClose >= result.ChartMax) {
+                                    ymax = result.PreviousClose + ypadding;
+                                }
+
+                                intradayChart.yAxis[0].setExtremes(ymin, ymax, false);
+                                intradayChart.yAxis[1].setExtremes(0, maxvol, false);
+                                intradayChart.redraw();
+                            }
+                        }
+                    });
+
+
+                }
+            }
+
+        function StopUpdating() {
+            stopUpdating = true;
+        }
+
+        return {
+            updateChart: UpdateChart,
+            stopUpdating: StopUpdating,
+            getChartData: GetChartData
+        };
+    }();
+
+        chartScriptLoaded.resolve();
+
+        var nasdaqRealTimePage = function () {
+
+            // number formatting function
+            // copyright Stephen Chapman 24th March 2006, 10th February 2007
+            // permission to use this function is granted provided
+            // that this copyright notice is retained intact
+
+            function formatNumber(num, dec, pnt) {
+
+                var thou = ',';
+                var curr1 = '';
+                var curr2 = '';
+                var n1 = '';
+                var n2 = '';
+
+                var x = Math.round(num * Math.pow(10, dec)); if (x >= 0) n1 = n2 = ''; var y = ('' + Math.abs(x)).split(''); var z = y.length - dec; if (z < 0) z--; for (var i = z; i < 0; i++) y.unshift('0'); y.splice(z, 0, pnt); if (y[0] == pnt) y.unshift('0'); while (z > 3) { z -= 3; y.splice(z, 0, thou); } var r = curr1 + n1 + y.join('') + n2 + curr2;
+                return r;
+            }
+
+            function SetLastSale(Input) {
+                if (Input.length == 0) {
+                    SymbolLastSale = "N";
+                    document.getElementById('quotes_content_left__LastSale').innerHTML = "MSFT 's Nasdaq Last Sale has not been updated";
+                    document.getElementById('_updownImage').style.display = "none";
+                    document.getElementById('quotes_content_left__NetChange').style.display = "none";
+    document.getElementById('quotes_content_left__PctChange').style.display = "none";
+                }
+                else {
+                    var changedispay;
+                    document.getElementById('quotes_content_left__LastSale').innerHTML = stripzeros(Input);
+        changedispay = SetNetAndPctChange(Input, '114.59');
+                    document.title = "MSFT :$" + stripzeros(Input) + " " + changedispay;
+
+                    SetQuoteBarLastSaleNetAndPctChange(Input, '114.59');
+                }
+            }
+
+            function limitDecimalPlaces(originalNumber, placesToLimitTo) {
+                originalNumber = originalNumber.toString();
+                var decimalIndex = originalNumber.search(/\./);
+
+                //if there was a decimal point, then go from the start of the string
+                //to one more after the decimal index (because we want the decimal) plus
+                //the placesToLimitTo that was passed in
+                var limitedToTwoDecimal;
+                if (decimalIndex >= -1) {
+                    limitedToTwoDecimal = originalNumber.substring(0, decimalIndex + 1 + placesToLimitTo);
+                }
+                else {
+                    limitedToTwoDecimal = originalNumber;
+                }
+
+                return (limitedToTwoDecimal);
+            }
+
+            function SetNetAndPctChange(lastsale, previousClose) {
+                var netChange = Math.round((lastsale - previousClose) * 10000) / 10000;
+                var pctChange;
+                if (lastsale == 0) {
+                    pctChange = '';
+                    netChange = 'N/A';
+                }
+                else if (previousClose == 0) {
+                    pctChange = '';
+                    netChange = 'N/A';
+                }
+                else {
+                    pctChange = (netChange / previousClose) * 100;
+                    pctChange = limitDecimalPlaces(pctChange, 2);
+                }
+
+                var Output;
+                var image = document.getElementById('_updownImage');
+
+                if (netChange == 0 || netChange == 0.00) {
+                    netChange = 'unch';
+                    pctChange = '';
+                    document.getElementById('_updownImage').innerHTML = "";
+                    document.getElementById('_updownImage').setAttribute("class", "");
+                    Output = netChange;
+                }
+                else if (netChange > 0) {
+                    //image.setAttribute("src",'https://www.nasdaq.com/images/greenArrowSmall_tp.gif' );
+                    document.getElementById('_updownImage').innerHTML = "&#9650;";
+                    document.getElementById('_updownImage').setAttribute("class", "green");
+                    Output = netChange + " (" + pctChange + "%)";
+                    pctChange = pctChange + '%';
+                }
+                else if (netChange < 0) {
+                    //image.setAttribute("src",'https://www.nasdaq.com/images/redArrowSmall_tp.gif' );
+                    document.getElementById('_updownImage').innerHTML = "&#9660;";
+                    document.getElementById('_updownImage').setAttribute("class", "red");
+                    Output = netChange + " (" + pctChange + "%)";
+                    netChange = (-1) * netChange;
+                    pctChange = (-1) * pctChange + '%';
+                }
+
+                document.getElementById('quotes_content_left__NetChange').innerHTML = netChange;
+        document.getElementById('quotes_content_left__PctChange').innerHTML = pctChange;
+
+        return Output;
+    }
+
+            function SetVolume(Input) {
+                document.getElementById('quotes_content_left__Volume').innerHTML = formatNumber(Input, 0, '');
+    }
+
+    function SetMarketTime(Input) {
+        document.getElementById('quotes_content_left__TradeTimeStamp').innerHTML = Input;
+	
+    SetQuoteBarTimeStamp(Input);
+}
+            function SetMarketStatus(Input) {
+                if (Input == "C") {
+                    document.getElementById('quotes_content_left__MarketStatus').innerHTML = "Market Closed";
+        } else {
+            document.getElementById('quotes_content_left__MarketStatus').innerHTML = "Market Open";
+        }
+    }
+
+            function SetTodaysHighAndLow(TodaysHigh, TodaysLow) {
+                if (TodaysLow.length == 0)
+                { document.getElementById('quotes_content_left__TodaysLow').innerHTML = "N/A"; }
+        else { document.getElementById('quotes_content_left__TodaysLow').innerHTML = "$" + TodaysLow; }
+
+        if (TodaysHigh.length == 0)
+        { document.getElementById('quotes_content_left__TodaysHigh').innerHTML = "N/A"; }
+    else { document.getElementById('quotes_content_left__TodaysHigh').innerHTML = "$" + TodaysHigh; }
+}
+
+            function stripzeros(price) {
+                var lastsale = price;
+                var splitvalue = lastsale.split('.');
+                if (splitvalue.length == 1)
+                    return price;
+                var splitarray = splitvalue[1].split("");
+                var endindex = 0;
+                for (var i = splitvalue[1].length - 1 ; i > 1; i--) {
+                    if (splitarray[i] != 0)
+                    { break; }
+                }
+                var change = splitvalue[1].substring(0, i + 1);
+                if (change.length == 1)
+                { change = change + "0"; }
+                return (splitvalue[0] + "." + change);
+            }
+
+
+            function UpdateQuoteData() {
+                $.ajax({
+                    type: "POST",
+                    url: "/callbacks/NLSHandler2.ashx",
+                    data: "msg=Last&symbol=MSFT&qesymbol=MSFT",
+            dataType: 'json',
+            success: function (data) {
+                if (!data.error) {
+                    SetLastSale(data.result.Price.toString());
+                    SetVolume(data.result.totVol.toString());
+                    SetTodaysHighAndLow(data.result.high.toString(), data.result.low.toString());
+                    SetMarketStatus(data.result.MarketStatus.toString());
+                    if (data.result.MarketStatus.toString() == "C") {
+                        SetMarketTime(data.result.tradedate.toString());
+                    } else {
+                        SetMarketTime(data.result.ServerTime.toString());
+                    }
+                }
+            }
+        });
+    }
+
+            return {
+                updateQuoteData: UpdateQuoteData
+            };
+
+        }();
+</script>
+<script type="text/javascript">
+    var tooltiptimer = "";
+    function showDelayedToolTip(eleID) {
+        tooltiptimer = setTimeout("showToolTip('" + eleID + "');", 1000);
+    }
+    function showToolTip(eleID) {
+        document.getElementById(eleID).getElementsByTagName("span")[0].style.visibility = "visible";
+        tooltiptimer = "";
+    }
+    function hideToolTip(eleID) {
+        if (tooltiptimer != "") {
+            clearTimeout(tooltiptimer);
+            tooltiptimer = "";
+        }
+        document.getElementById(eleID).getElementsByTagName("span")[0].style.visibility = "hidden";
+    }
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "mainEntity":{
+        "@type":"Corporation",
+        "name":"Microsoft Corporation Common Stock",
+        "tickerSymbol":"MSFT"
+    },
+    "breadcrumb":{
+    "@type": "BreadcrumbList",
+    "itemListElement":
+    [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "item":
+            {
+                "@type": "WebPage",
+                "@id": "https://www.nasdaq.com/",
+                "name": "Home"
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "item":
+            {
+                "@type": "WebPage",
+                "@id": "https://www.nasdaq.com/quotes/",
+                "name": "Quotes"
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "item":
+            {
+                "@type": "WebPage",
+                "@id": "https://www.nasdaq.com/symbol/msft",
+                "name": "Symbol"
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 4,
+            "item":
+            {
+                "@type": "WebPage",
+                "@id": "https://www.nasdaq.com/quotes/real-time.aspx",
+                "name": "Real Time Quotes"
+            }
+        }
+    ]
+}
+}
+</script>
+<!-- END page bottom script -->
+
+</body>	
+</html>
