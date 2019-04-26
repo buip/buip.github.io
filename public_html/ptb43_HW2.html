@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Weather</title>
+    <!-- CSS Style for the page  -->
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js">
+    </script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js">
+    </script>
+    <link type="text/css" rel="stylesheet"
+        href="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css" />
+</head>
+
+<body>
+    <input id="api_key" placeholder="Please enter your API Key">
+    <input id="zip_code" placeholder="Please enter your zip code">
+    <button onclick="getResult()">
+        Get Weather
+    </button>
+    <div id="content"></div>
+</body>
+
+<script>
+    function getResult() {
+        // Get zip code and api key
+        //var api_key = $('#api_key').val();
+        //var zip_code = $('#zip_code').val();
+
+        var api_key = "bcda2eb7f05532ae906b444cdb805512"
+        var zip_code = "19104"
+
+        // Concatnate uri with appropriate zip code and api key
+        var URL = "https://api.openweathermap.org/data/2.5/forecast?zip=" + zip_code + "&appid=" + api_key;
+
+        // Clear previous content
+        $('#content').html('');
+
+        // Initialize table
+        var table = $('<table/>').attr('data-role', 'table').attr('data-mode', 'reflow').addClass("ui-responsive");
+        var head = $('<thead/>');
+        var body = $('<tbody/>');
+
+        // Make ajax request to get the weather data
+        $.ajax({
+            url: URL,
+            type: 'GET',
+            dataType: 'json',
+            success: function (data) {
+                $.each(data.list, function (i, item) {
+                    var date_time = item.dt_txt;
+                    var description = item.weather[0].description;
+                    var temp = item.main.temp;
+                    var deg_F = (Number(temp) - 273.15) * 9 / 5 + 32;
+                    var row = $('<tr/>');
+                    row.append($('<td/>').text(date_time));
+                    row.append($('<td/>').text(description));
+                    row.append($('<td/>').text(deg_F));
+                    body.append(row);
+                });
+                table.append(head);
+                table.append(body);
+                $('#content').append(table);
+            },
+            error: function (request, error) {
+                alert("Request: " + JSON.stringify(request));
+            }
+        });
+    }
+</script>
+
+</html>
